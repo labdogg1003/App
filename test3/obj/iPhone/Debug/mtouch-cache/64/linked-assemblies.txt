@@ -1,0 +1,8 @@
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/Xamarin.iOS.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/test3.exe
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/Calabash.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/Mono.Dynamic.Interpreter.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/System.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/Xamarin.Mobile.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/mscorlib.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/mtouch-cache/64/Link/System.Core.dll
