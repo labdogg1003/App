@@ -1,7 +1,7 @@
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
-/Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/12-view-13.nib
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/260-view-261.nib
+/Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/362-view-363.nib
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/8rJ-Kc-sve-view-QS5-Rx-YEW.nib
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/Info.plist
 /Users/labdog/Projects/test3/test3/obj/iPhoneSimulator/Debug/ibtool/Main.storyboardc/UITabBarController-49e-Tb-3d3.nib

@@ -1,26 +1,16 @@
-﻿using System;
+using System;
 
 using UIKit;
+using System.Collections.Generic;
+using Foundation;
 
 namespace test3
 {
-	public partial class FirstViewController : UIViewController
+	public partial class FirstViewController : UITableViewController
 	{
 		public FirstViewController (IntPtr handle) : base (handle)
 		{
 		}
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
-
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
-		}
 	}
 }
-
