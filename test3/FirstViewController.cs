@@ -16,12 +16,13 @@ namespace StoryboardTable
 			Title = "Saved Data Sets";
 
 			// Custom initialization
-			dataSet = new List<DataSet> {
-				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Test"}
+			dataSet = new List<DataSet>
+			{
+				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Test"},
+				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Testing"},
+				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="This is a test"}
 
 			};
-			//Console.WriteLine (dataSet[0].dataSetName);
-
 		}
 
 		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
