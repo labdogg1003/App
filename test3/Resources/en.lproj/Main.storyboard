@@ -38,14 +38,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="blurred-background-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="221">
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" image="blurred-background-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="221" fixedFrame="YES">
                                 <rect key="frame" x="42" y="180" width="160" height="240"/>
                                 <animations/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="203">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="203" fixedFrame="YES">
                                 <rect key="frame" x="137" y="195" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button">
@@ -55,7 +55,7 @@
                                     <rect key="frame" x="156" y="222" width="46" height="30"/>
                                 </variation>
                             </button>
-                            <button autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="204">
+                            <button autoresizesSubviews="NO" clearsContextBeforeDrawing="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="204" fixedFrame="YES">
                                 <rect key="frame" x="137" y="337" width="46" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
@@ -67,7 +67,7 @@
                                     <rect key="frame" x="48" y="474" width="261" height="39"/>
                                 </variation>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="213">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="213" fixedFrame="YES">
                                 <rect key="frame" x="139" y="257" width="42" height="21"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -116,7 +116,7 @@
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                        <rect key="frame" x="0.0" y="551" width="600" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -133,7 +133,7 @@
         <!--Table View Controller-->
         <scene sceneID="11">
             <objects>
-                <tableViewController id="12" sceneMemberID="viewController">
+                <tableViewController id="12" sceneMemberID="viewController" customClass="FirstViewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,6 +168,8 @@
         <image name="Second" width="30" height="30"/>
         <image name="blurred-background-1.jpg" width="700" height="525"/>
         <image name="loginButton.png" width="568" height="115"/>
+        <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="Pics/monkey.jpeg" width="284" height="177"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

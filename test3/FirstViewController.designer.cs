@@ -9,21 +9,13 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace test3
+namespace StoryboardTable
 {
 	[Register ("FirstViewController")]
 	partial class FirstViewController
 	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UITableView TableController { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (TableController != null) {
-				TableController.Dispose ();
-				TableController = null;
-			}
 		}
 	}
 }
