@@ -34,6 +34,10 @@ namespace test3
 		
 			CIContext ctx = CIContext.FromOptions (null);
 			CGImage cgimage = uiImagePic.CGImage;
+
+			nfloat powerValueAvg = 0.0f;
+			nfloat powerValueTot = 0.0f;
+			nint numPixels = 0;
 			//compute values
 			nint width  = cgimage.Width;
 			nint height = cgimage.Height;
@@ -61,6 +65,15 @@ namespace test3
 					Console.Write("(");
 					for(nint x = 0; x < bytes_per_pixel; x++)
 					{
+						//pixel[0] is r
+						//pixel[1] is g
+						//pixel[2] is b
+						//pixel[3] is alpha
+						numPixels++;
+						nfloat curPower = pixel [0] * 0.299f + pixel [1] * 0.587f + pixel [2] * 0.0722f;
+						powerValueTot += curPower;
+						powerValueAvg = powerValueTot / numPixels;
+
 						Console.Write(pixel[x]);
 						if( x < bytes_per_pixel - 1 )
 							Console.Write(",");
@@ -73,7 +86,9 @@ namespace test3
 
 				Console.Write("\n");
 			}
-
+			string outputToName;
+			outputToName = "Avg Power=" + powerValueAvg.ToString ("0.0000") + " Tot Power=" + powerValueTot.ToString ("0.0000");
+			this.dataSetName = outputToName;
 
 		}
 	}
