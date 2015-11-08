@@ -105,22 +105,28 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="SecondViewController.cs" />
-    <Compile Include="SecondViewController.designer.cs">
+    <Compile Include="DataSet.cs" />
+    <Compile Include="Helpers\Camera.cs" />
+    <Compile Include="Helpers\RootTableSource.cs" />
+    <Compile Include="Helpers\ImageProcessing.cs" />
+    <Compile Include="Views\DataViewController.cs" />
+    <Compile Include="Views\ThirdViewController.designer.cs">
+      <DependentUpon>DataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DataViewController.designer.cs">
+      <DependentUpon>DataViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecondViewController.cs" />
+    <Compile Include="Views\SecondViewController.designer.cs">
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="OutputRecorder.cs" />
-    <Compile Include="ThirdViewController.cs" />
-    <Compile Include="ThirdViewController.designer.cs">
-      <DependentUpon>ThirdViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FirstViewController.cs" />
-    <Compile Include="FirstViewController.designer.cs">
+    <Compile Include="Views\FirstViewController.cs" />
+    <Compile Include="Views\FirstViewController.designer.cs">
       <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableSource.cs" />
-    <Compile Include="DataSet.cs" />
-    <Compile Include="RootTableSource.cs" />
+    <Compile Include="Views\ListViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.5.0.6446\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6446\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -134,8 +140,11 @@
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\blurred-background-1.jpg" />
     <BundleResource Include="Resources\Pics\monkey.jpeg" />
+    <BundleResource Include="Resources\Pics\DefaultPicture.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Pics\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Views\" />
   </ItemGroup>
 </Project>

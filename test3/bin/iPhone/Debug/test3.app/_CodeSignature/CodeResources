@@ -6,47 +6,47 @@
 	<dict>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		irY/B5wqmRib2o3AQ4VQYHip/C8=
+		b8Z1/40mlSroNB3rWbeHQG/xPJs=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		v32YrSIxzDwvRTTyKDN8LC2CWj8=
+		fVWTyq/nyJQ5+cpLnicdaQGjwg0=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		NNS3vD5UXSGhlAzReWUPQ/ba9e4=
+		2/pSchp58mukdPAB340Q7gxQQvU=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		nydoNb6NPkHEXJPrghh7HuU6tv4=
+		lXvfMbJsSsexhuw/h7q32vQLxeU=
 		</data>
 		<key>.monotouch-64/Calabash.dll</key>
 		<data>
-		Y6E2eybpsrxl6PFrM6TvIi9uTrs=
+		aGuHkUBv1QXSrZ5bU1nHSl1RArI=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		0X52shFSuusDZSs6EaSFhsULjtQ=
+		Mq+9rj3Dpmm2WYUdbkVX93ZL9CA=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		EQ1twBP79cSsAzci2r4HzE0dyZo=
+		7b8+PABAMdsiNmGj9yFsULw7S8I=
 		</data>
 		<key>.monotouch-64/System.Core.dll</key>
 		<data>
-		UShLx4P+ZuB+hb7DvllS/6sCwXs=
+		p9OVvWxSz6D63p/HZHSmOVcDvXs=
 		</data>
 		<key>.monotouch-64/System.Core.dll.mdb</key>
 		<data>
-		NQOytyG3hdqKAmp1oWgnN9mGOT4=
+		lNpptriCpV0mJ0fVkS8FiE+pSLQ=
 		</data>
 		<key>.monotouch-64/System.dll</key>
 		<data>
-		+a6rujezco1SiMQyEoVIMBZFB2A=
+		VBCxjed4lgR4kcBVy/0/kZfgvNc=
 		</data>
 		<key>.monotouch-64/System.dll.mdb</key>
 		<data>
-		GzYMWo02S49SZpBwVrzfDLWqEaE=
+		JFKFkO9pq0GI1M7xLh6rIt1IEOg=
 		</data>
 		<key>.monotouch-64/Xamarin.Mobile.dll</key>
 		<data>
@@ -54,27 +54,27 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		Per0OYUqJ+KNXEZEqhh+YAw9jIg=
+		77dyUaGky75CbwRoKcfy4hgMIJE=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		8Z8ke/aI5VGtzLV0fB4snYDOTNw=
+		Q+XPftsu8Ky8BTgIhCXaf+yQO00=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
-		LLPnGAWMgufW2RSahwqsWS+xOT8=
+		x1dwTrZHNEUqUGLzBCexEhUipAQ=
 		</data>
 		<key>.monotouch-64/mscorlib.dll.mdb</key>
 		<data>
-		lZZE3M0z/gPCw4aW4NefZi+IYRs=
+		5FHPsFfuLpnhxq1IK3TQjzMw4ak=
 		</data>
 		<key>.monotouch-64/test3.exe</key>
 		<data>
-		nAlzs3C5Gh6/EzfZ+8XcxVOn3fg=
+		KnxXU93g5rHz1C5jsWkjzz+7I9g=
 		</data>
 		<key>.monotouch-64/test3.exe.mdb</key>
 		<data>
-		UX4etDjshLFHHnxqPPiG6+vTyHs=
+		d5TXIGlYXevsakqlAgG3+SHWsQs=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -98,11 +98,15 @@
 		</data>
 		<key>Main.storyboardc/260-view-261.nib</key>
 		<data>
-		ew/T4Dw74fHFdNR3uqVpckcYRKw=
+		5bkGMMePcERBzuGJsVb4iVXy3XQ=
+		</data>
+		<key>Main.storyboardc/362-view-363.nib</key>
+		<data>
+		1Ov0zx4ahun1NUpPWdl+iRg5zo8=
 		</data>
 		<key>Main.storyboardc/8rJ-Kc-sve-view-QS5-Rx-YEW.nib</key>
 		<data>
-		Qu17P/Pkl5U1C+E2zrFrau3qUtg=
+		Oxb+qbrSQNthwj+WJgWd90mF2PQ=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -110,7 +114,7 @@
 		</data>
 		<key>Main.storyboardc/UITabBarController-49e-Tb-3d3.nib</key>
 		<data>
-		yrkhbQTVErnQsdWm+YjgPVKLOT4=
+		WQ2aqyFK72JVlf091ETelu917xM=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -119,6 +123,14 @@
 		<key>NOTICE</key>
 		<data>
 		udRFZiUn5Wu+JuryWRjPAicxwsE=
+		</data>
+		<key>Pics/DefaultPicture.png</key>
+		<data>
+		IbfZoavkx/ulRZ8g2qVeeWmpGqg=
+		</data>
+		<key>Pics/monkey.jpeg</key>
+		<data>
+		9ehzP782gm+x2g7OWDj1oLXxGMU=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -144,7 +156,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TAzDnQDlZARIu30tLsr74kmdLoc=
+			9lMec6QRVB+mK2L/Gwdl2n/8fL8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -153,7 +165,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sS4fSIFrnrFnTwI10I+fFcPieqw=
+			q2Pr2OL0AAnz0Y+llk4D7dQuBps=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -171,7 +183,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KbkONu32MeDB2QhG6eea30uYUWk=
+			3McIWPJeYXNw2uTWdjxpQcKNcVU=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -221,19 +233,19 @@
 		</dict>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		irY/B5wqmRib2o3AQ4VQYHip/C8=
+		b8Z1/40mlSroNB3rWbeHQG/xPJs=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		v32YrSIxzDwvRTTyKDN8LC2CWj8=
+		fVWTyq/nyJQ5+cpLnicdaQGjwg0=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
-		NNS3vD5UXSGhlAzReWUPQ/ba9e4=
+		2/pSchp58mukdPAB340Q7gxQQvU=
 		</data>
 		<key>.monotouch-32/mscorlib.dll.mdb</key>
 		<data>
-		nydoNb6NPkHEXJPrghh7HuU6tv4=
+		lXvfMbJsSsexhuw/h7q32vQLxeU=
 		</data>
 		<key>.monotouch-32/test3.exe</key>
 		<dict>
@@ -247,31 +259,31 @@
 		</dict>
 		<key>.monotouch-64/Calabash.dll</key>
 		<data>
-		Y6E2eybpsrxl6PFrM6TvIi9uTrs=
+		aGuHkUBv1QXSrZ5bU1nHSl1RArI=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll</key>
 		<data>
-		0X52shFSuusDZSs6EaSFhsULjtQ=
+		Mq+9rj3Dpmm2WYUdbkVX93ZL9CA=
 		</data>
 		<key>.monotouch-64/Mono.Dynamic.Interpreter.dll.mdb</key>
 		<data>
-		EQ1twBP79cSsAzci2r4HzE0dyZo=
+		7b8+PABAMdsiNmGj9yFsULw7S8I=
 		</data>
 		<key>.monotouch-64/System.Core.dll</key>
 		<data>
-		UShLx4P+ZuB+hb7DvllS/6sCwXs=
+		p9OVvWxSz6D63p/HZHSmOVcDvXs=
 		</data>
 		<key>.monotouch-64/System.Core.dll.mdb</key>
 		<data>
-		NQOytyG3hdqKAmp1oWgnN9mGOT4=
+		lNpptriCpV0mJ0fVkS8FiE+pSLQ=
 		</data>
 		<key>.monotouch-64/System.dll</key>
 		<data>
-		+a6rujezco1SiMQyEoVIMBZFB2A=
+		VBCxjed4lgR4kcBVy/0/kZfgvNc=
 		</data>
 		<key>.monotouch-64/System.dll.mdb</key>
 		<data>
-		GzYMWo02S49SZpBwVrzfDLWqEaE=
+		JFKFkO9pq0GI1M7xLh6rIt1IEOg=
 		</data>
 		<key>.monotouch-64/Xamarin.Mobile.dll</key>
 		<data>
@@ -279,27 +291,27 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		Per0OYUqJ+KNXEZEqhh+YAw9jIg=
+		77dyUaGky75CbwRoKcfy4hgMIJE=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		8Z8ke/aI5VGtzLV0fB4snYDOTNw=
+		Q+XPftsu8Ky8BTgIhCXaf+yQO00=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
-		LLPnGAWMgufW2RSahwqsWS+xOT8=
+		x1dwTrZHNEUqUGLzBCexEhUipAQ=
 		</data>
 		<key>.monotouch-64/mscorlib.dll.mdb</key>
 		<data>
-		lZZE3M0z/gPCw4aW4NefZi+IYRs=
+		5FHPsFfuLpnhxq1IK3TQjzMw4ak=
 		</data>
 		<key>.monotouch-64/test3.exe</key>
 		<data>
-		nAlzs3C5Gh6/EzfZ+8XcxVOn3fg=
+		KnxXU93g5rHz1C5jsWkjzz+7I9g=
 		</data>
 		<key>.monotouch-64/test3.exe.mdb</key>
 		<data>
-		UX4etDjshLFHHnxqPPiG6+vTyHs=
+		d5TXIGlYXevsakqlAgG3+SHWsQs=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -319,11 +331,15 @@
 		</data>
 		<key>Main.storyboardc/260-view-261.nib</key>
 		<data>
-		ew/T4Dw74fHFdNR3uqVpckcYRKw=
+		5bkGMMePcERBzuGJsVb4iVXy3XQ=
+		</data>
+		<key>Main.storyboardc/362-view-363.nib</key>
+		<data>
+		1Ov0zx4ahun1NUpPWdl+iRg5zo8=
 		</data>
 		<key>Main.storyboardc/8rJ-Kc-sve-view-QS5-Rx-YEW.nib</key>
 		<data>
-		Qu17P/Pkl5U1C+E2zrFrau3qUtg=
+		Oxb+qbrSQNthwj+WJgWd90mF2PQ=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -331,7 +347,7 @@
 		</data>
 		<key>Main.storyboardc/UITabBarController-49e-Tb-3d3.nib</key>
 		<data>
-		yrkhbQTVErnQsdWm+YjgPVKLOT4=
+		WQ2aqyFK72JVlf091ETelu917xM=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -340,6 +356,14 @@
 		<key>NOTICE</key>
 		<data>
 		udRFZiUn5Wu+JuryWRjPAicxwsE=
+		</data>
+		<key>Pics/DefaultPicture.png</key>
+		<data>
+		IbfZoavkx/ulRZ8g2qVeeWmpGqg=
+		</data>
+		<key>Pics/monkey.jpeg</key>
+		<data>
+		9ehzP782gm+x2g7OWDj1oLXxGMU=
 		</data>
 		<key>Settings.bundle/Root.plist</key>
 		<data>
@@ -361,7 +385,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TAzDnQDlZARIu30tLsr74kmdLoc=
+			9lMec6QRVB+mK2L/Gwdl2n/8fL8=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -370,7 +394,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			sS4fSIFrnrFnTwI10I+fFcPieqw=
+			q2Pr2OL0AAnz0Y+llk4D7dQuBps=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -388,7 +412,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KbkONu32MeDB2QhG6eea30uYUWk=
+			3McIWPJeYXNw2uTWdjxpQcKNcVU=
 			</data>
 			<key>optional</key>
 			<true/>

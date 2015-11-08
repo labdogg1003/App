@@ -24,3 +24,5 @@
 /Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/en.lproj/Main.storyboardc/Info.plist
 /Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/en.lproj/Main.storyboardc/UITabBarController-49e-Tb-3d3.nib
 /Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/Main.storyboardc/260-view-261.nib
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/Main.storyboardc/362-view-363.nib
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/optimized/Pics/DefaultPicture.png

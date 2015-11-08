@@ -18,7 +18,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 4,1
-	.asciz "Mono AOT Compiler 4.0.4 (xcode7-c5/751e0fa Fri Sep 25 18:02:45 EDT 2015)"
+	.asciz "Mono AOT Compiler 4.0.4 (xcode7-c5/751e0fa Wed Oct 21 22:49:31 EDT 2015)"
 	.asciz "Calabash.dll"
 	.asciz ""
 
@@ -333,8 +333,8 @@ _mono_aot_module_Calabash_info:
 blob:
 
 	.byte 0,0,1,4,12,0,40,43,48,41,10,0,1,12,1,96,0,0,2,48,0,0,0,32,2,0,9,104,64,116,0,2
-	.byte 0,64,1,40,0,128,144,8,0,0,1,4,128,144,8,0,0,1,193,0,14,191,193,0,14,188,193,0,14,187,193,0
-	.byte 14,185,115,103,101,110,0
+	.byte 0,64,1,40,0,128,144,8,0,0,1,4,128,144,8,0,0,1,193,0,12,218,193,0,12,215,193,0,12,214,193,0
+	.byte 12,213,115,103,101,110,0
 .section __TEXT, __const
 	.align 3
 Lglobals_hash:

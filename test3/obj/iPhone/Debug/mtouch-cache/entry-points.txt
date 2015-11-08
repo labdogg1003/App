@@ -1,6 +1,7 @@
 xamarin_release_managed_ref
 xamarin_create_managed_ref
 xamarin_get_block_descriptor
-monotouch_GetFolderPath
+xamarin_IntPtr_objc_msgSend_IntPtr
+xamarin_IntPtr_objc_msgSendSuper_IntPtr
 monotouch_log
 monotouch_timezone_get_data
