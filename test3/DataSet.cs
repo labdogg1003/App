@@ -21,7 +21,7 @@ namespace test3
 		public UIImage changePicture { get; set;}
 		public UIImage originalPicture { get; set;}
 		public string dataSetName { get; set;}
-		public int Id { get; set; }
+		public int? Id { get; set; }
 
 		public DataSet ()
 		{

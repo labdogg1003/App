@@ -14,6 +14,7 @@ namespace StoryboardTable
 		public FirstViewController (IntPtr handle) : base (handle)
 		{
 			Title = "Saved Data Sets";
+			DataSetJsonService dataService = new DataSetJsonService (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments));
 
 			// Custom initialization
 			dataSet = new List<DataSet>
@@ -22,13 +23,19 @@ namespace StoryboardTable
 				//new DataSet("Pics/monkey.jpeg") {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg")},
 				//new DataSet("Pics/monkey.jpeg") {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg")},
 				//new DataSet("Pics/monkey.jpeg") {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg")},
-
+			
 //=======
 				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Test"},
 				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Testing"},
 				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="This is a test"}
 //>>>>>>> Stashed changes
 			};
+
+			//This is where we retrieve our json dataSets.
+			foreach (DataSet element in dataService.DataSets)
+			{
+				dataSet.Add(element);
+			}
 		}
 
 		//public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)

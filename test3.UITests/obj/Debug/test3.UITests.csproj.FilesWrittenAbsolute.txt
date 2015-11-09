@@ -1,7 +1,0 @@
-/Users/labdog/Projects/test3/test3.UITests/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
-/Users/labdog/Projects/test3/test3.UITests/bin/Debug/test3.UITests.dll.mdb
-/Users/labdog/Projects/test3/test3.UITests/bin/Debug/test3.UITests.dll
-/Users/labdog/Projects/test3/test3.UITests/obj/Debug/test3.UITests.dll
-/Users/labdog/Projects/test3/test3.UITests/obj/Debug/test3.UITests.dll.mdb
-/Users/labdog/Projects/test3/test3.UITests/bin/Debug/nunit.framework.dll
-/Users/labdog/Projects/test3/test3.UITests/bin/Debug/Xamarin.UITest.dll

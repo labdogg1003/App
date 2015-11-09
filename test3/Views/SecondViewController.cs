@@ -56,6 +56,15 @@ namespace test3
 				//set that image as the button image
 				btnP0Photo.SetImage (P0Image, UIControlState.Normal);
 			};
+
+			btnSave.TouchUpInside += (o, e) => 
+			{
+				DataSet dataSet = new DataSet();
+
+				dataSet.changePicture = dataImage;
+				dataSet.originalPicture = P0Image;
+
+			};
 		}
 
 		public override void ViewDidAppear(bool animated)

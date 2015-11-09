@@ -32,6 +32,10 @@ namespace test3
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnSave { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblData { get; set; }
 
 		[Outlet]
@@ -59,6 +63,10 @@ namespace test3
 			if (btnP0Photo != null) {
 				btnP0Photo.Dispose ();
 				btnP0Photo = null;
+			}
+			if (btnSave != null) {
+				btnSave.Dispose ();
+				btnSave = null;
 			}
 			if (lblData != null) {
 				lblData.Dispose ();

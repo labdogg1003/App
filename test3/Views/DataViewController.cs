@@ -34,20 +34,9 @@ namespace test3
 			base.ViewDidLoad ();
 
 			//When we push the button, we will take a photo for the data image
-			/*DataButton.TouchUpInside += (o, e) => 
-			{
-				//Call camera and ask it to take a picture
-				Camera.TakePicture(this, (obj) =>
-				{
-					photo = obj.ValueForKey(new NSString("UIImagePickerControllerOriginalImage")) as UIImage;
-					dataImage = photo;
-				});
+	
 
-				//set that image as the button image
-				DataButton.SetImage(dataImage, UIControlState.Normal);
-			};
-
-			//When we push the button, we will take a photo for the p0 image
+			/*//When we push the button, we will take a photo for the p0 image
 			P0Button.TouchUpInside += (o, e) => 
 			{
 				Camera.TakePicture(this, (obj) =>

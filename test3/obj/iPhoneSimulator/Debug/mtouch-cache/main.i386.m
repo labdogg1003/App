@@ -9,7 +9,6 @@ void xamarin_register_modules ()
 void xamarin_register_assemblies ()
 {
 	xamarin_open_and_register ("Xamarin.iOS.dll");
-	xamarin_open_and_register ("Xamarin.Mobile.dll");
 
 }
 
