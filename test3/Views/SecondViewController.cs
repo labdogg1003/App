@@ -18,9 +18,12 @@ namespace test3
 		//These are the two images we write to in this view for buttons.
 		UIImage dataImage = UIImage.FromBundle("Pics/DefaultPicture.png");
 		UIImage P0Image = UIImage.FromBundle("Pics/DefaultPicture.png");
+		ImageProcessing process = new ImageProcessing();
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
+
+		DataSetJsonService dataService = new DataSetJsonService (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments));
 
 		public SecondViewController (IntPtr handle) : base (handle)
 		{
@@ -30,6 +33,9 @@ namespace test3
 
 		public override void ViewDidLoad ()
 		{
+			ResetImage (dataImage);	 //Needs to be tested IRL
+			ResetImage (P0Image);    //Needs to be tested IRL
+
 			//Load the base Method.
 			base.ViewDidLoad ();
 
@@ -44,6 +50,7 @@ namespace test3
 
 				//set that image as the button image
 				btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
+				UpdateValues (txtDataValue, dataImage);
 			};
 
 			//When we push the button, we will take a photo for the p0 image
@@ -55,15 +62,13 @@ namespace test3
 
 				//set that image as the button image
 				btnP0Photo.SetImage (P0Image, UIControlState.Normal);
+				UpdateValues (txtP0Value, P0Image);
 			};
 
 			btnSave.TouchUpInside += (o, e) => 
 			{
-				DataSet dataSet = new DataSet();
-
-				dataSet.changePicture = dataImage;
-				dataSet.originalPicture = P0Image;
-
+				//Alert The user that it needs a name
+				AlertGetName();
 			};
 		}
 
@@ -73,8 +78,93 @@ namespace test3
 
 			btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
 			btnP0Photo.SetImage (P0Image, UIControlState.Normal);
-
 		}
+
+		private async void AlertGetName()
+		{
+			int buttonClicked = -1;
+
+			//Create Our Alert
+			var alert = new UIAlertView("Filename","Please Input The Filename", null, "Cancel", "Submit" );
+
+			//Set The Alert Style
+			alert.AlertViewStyle = UIAlertViewStyle.PlainTextInput;
+
+			//Create Our Async Task
+			var tcs = new TaskCompletionSource<int>();
+
+			//Check What Button Was Pressed
+			alert.Clicked += (sender, buttonArgs) => {
+				buttonClicked = (int)buttonArgs.ButtonIndex;
+				tcs.TrySetResult ((int)buttonArgs.ButtonIndex);
+			};
+			alert.Show();
+
+			//Wait For Us To Get A Button Press
+			await tcs.Task;
+
+			//After Press Get Our Text From TextBox
+			string text = alert.GetTextField(0).Text;
+
+			//Check That We Clicked The Right Button.
+			if (buttonClicked == 0) 
+			{
+				Console.WriteLine ("Cancel Button Clicked : Not Saving Any Data!");
+			}
+			else if (buttonClicked == 1) 
+			{
+				Console.WriteLine ("Submit Button Clicked : Saving All The Data!");
+
+				DataSet dataSet = new DataSet()
+				{
+					dataSetName = text	
+				};
+
+				//Save Data To JSON
+				try 
+				{
+					dataService.SaveDataSet (dataSet);
+
+					//Has to be called after dataService because Id needs to be assigned by JSON
+					SaveImageToFile(dataSet.dataSetName + "P0" + dataSet.Id, P0Image);
+					SaveImageToFile(dataSet.dataSetName + "Data" + dataSet.Id, dataImage);
+				} 
+				catch (Exception e) 
+				{
+					Console.WriteLine ("Exception Caught : Cant Write Data To File (Please Fix This)");
+					Console.WriteLine (e);
+				}
+			}
+			else
+			{
+				Console.WriteLine ("Alert Was Closed Unnaturally: What Happened?");
+			}
+		}
+
+		//NEEDS TO BE TESTED IRL; Should reset image to the default image.
+		public void ResetImage(UIImage image)
+		{
+			image = UIImage.FromBundle("Pics/DefaultPicture.png");
+		}
+
+		//Takes a filename (dataset name + imageType (Po or data) + id , and the image)
+		public void SaveImageToFile(String filename, UIImage image)
+		{
+			string jpgFilename = System.IO.Path.Combine (dataService._storagePath, filename + ".jpg");
+			NSData imgData = image.AsJPEG();
+			NSError err = null;
+			if (imgData.Save(jpgFilename, false, out err)) {
+				Console.WriteLine("saved as " + jpgFilename);
+			} else {
+				Console.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
+			}
+		}
+
+		public void UpdateValues (UILabel label ,UIImage image)
+		{
+			label.Text = ImageProcessing.CalculatePValue (image);  
+		}
+
 	}
 }
 

@@ -10,11 +10,11 @@ namespace StoryboardTable
 	public partial class FirstViewController : UITableViewController
 	{
 		List<DataSet> dataSet;
-
+		DataSetJsonService dataService = new DataSetJsonService (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments));
+	
 		public FirstViewController (IntPtr handle) : base (handle)
 		{
 			Title = "Saved Data Sets";
-			DataSetJsonService dataService = new DataSetJsonService (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments));
 
 			// Custom initialization
 			dataSet = new List<DataSet>
@@ -25,12 +25,12 @@ namespace StoryboardTable
 				//new DataSet("Pics/monkey.jpeg") {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg")},
 			
 //=======
-				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Test"},
-				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Testing"},
-				new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="This is a test"}
+				//new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Test"},
+				//new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="Testing"},
+				//new DataSet() {originalPicture = UIImage.FromFile("Pics/monkey.jpeg"), changePicture = UIImage.FromFile("Pics/monkey.jpeg"), dataSetName="This is a test"}
 //>>>>>>> Stashed changes
 			};
-
+				
 			//This is where we retrieve our json dataSets.
 			foreach (DataSet element in dataService.DataSets)
 			{
@@ -58,6 +58,8 @@ namespace StoryboardTable
 			var newId = dataSet[dataSet.Count - 1].Id + 1;
 			var newDataSet = new DataSet(){Id=newId};
 			dataSet.Add (newDataSet);
+
+
 
 		    // then open the detail view to edit it
 			//var detail = Storyboard.InstantiateViewController("detail") as TaskDetailViewController;
@@ -92,10 +94,10 @@ namespace StoryboardTable
 		{
 			base.ViewDidLoad ();
 
-			// Perform any additional setup after loading the view, typically from a nib.
+			 //Perform any additional setup after loading the view, typically from a nib.
 			//AddButton.Clicked += (sender, e) => {
-		//		CreateTask ();
-		//	};
+			//CreateTask ();
+		    //};
 		}
 
 		public override void ViewWillAppear (bool animated)
@@ -103,12 +105,23 @@ namespace StoryboardTable
 			base.ViewWillAppear (animated);
 
 			// bind every time, to reflect deletion in the Detail view
-			TableView.Source = new RootTableSource(dataSet.ToArray ());
+			TableView.Source = new RootTableSource(dataSet);
+			dataService.RefreshCache ();
+
+			dataSet = new List<DataSet> ();
+
 		}
 
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+			Console.WriteLine ("View Did Appear");
+			dataService.RefreshCache ();
+
+			foreach (DataSet element in dataService.DataSets)
+			{
+				dataSet.Add(element);
+			}
 		}
 
 		public override void ViewWillDisappear (bool animated)

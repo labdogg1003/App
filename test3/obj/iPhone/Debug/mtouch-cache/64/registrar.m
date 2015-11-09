@@ -960,6 +960,7 @@ static void native_to_managed_trampoline_16 (id self, SEL _cmd, MonoMethod **man
 	@property (nonatomic, assign) id btnDataPhoto;
 	@property (nonatomic, assign) id btnNew;
 	@property (nonatomic, assign) id btnP0Photo;
+	@property (nonatomic, assign) id btnSave;
 	@property (nonatomic, assign) id lblData;
 	@property (nonatomic, assign) id lblP0;
 	@property (nonatomic, assign) id lblSuccess;
@@ -975,6 +976,8 @@ static void native_to_managed_trampoline_16 (id self, SEL _cmd, MonoMethod **man
 	-(void) setBtnNew:(id)p0;
 	-(id) btnP0Photo;
 	-(void) setBtnP0Photo:(id)p0;
+	-(id) btnSave;
+	-(void) setBtnSave:(id)p0;
 	-(id) lblData;
 	-(void) setLblData:(id)p0;
 	-(id) lblP0;
@@ -1054,6 +1057,18 @@ static void native_to_managed_trampoline_16 (id self, SEL _cmd, MonoMethod **man
 	{
 		static MonoMethod *managed_method = NULL;
 		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIButton, Xamarin.iOS", "test3.SecondViewController, test3", "set_btnP0Photo");
+	}
+
+	-(id) btnSave
+	{
+		static MonoMethod *managed_method = NULL;
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, "test3.SecondViewController, test3", "get_btnSave");
+	}
+
+	-(void) setBtnSave:(id)p0
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIButton, Xamarin.iOS", "test3.SecondViewController, test3", "set_btnSave");
 	}
 
 	-(id) lblData
@@ -1549,14 +1564,18 @@ static void native_to_managed_trampoline_16 (id self, SEL _cmd, MonoMethod **man
 		"Xamarin.iOS", 
 		"mscorlib", 
 		"System", 
-		"Calabash"
+		"System.Core", 
+		"Mono.Dynamic.Interpreter", 
+		"Calabash", 
+		"Newtonsoft.Json", 
+		"System.Runtime.Serialization"
 	};
 
 	static struct MTRegistrationMap __xamarin_registration_map = {
 		NULL,
 		__xamarin_registration_assemblies,
 		__xamarin_class_map,
-		5,
+		9,
 		61,
 		11
 	};

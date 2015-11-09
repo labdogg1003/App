@@ -8,7 +8,7 @@ namespace test3
 {
 	public class DataSetJsonService
 	{
-		private string _storagePath;
+		public string _storagePath;
 		private List<DataSet> _dataSets = new List<DataSet>();
 
 		public DataSetJsonService ( string storagePath)

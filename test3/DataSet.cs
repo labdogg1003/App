@@ -27,6 +27,11 @@ namespace test3
 		{
 
 		}
+
+		public override string ToString()
+		{
+			return "Name : " + dataSetName + "\n Change Image :" + changePicture + "\n Original Image : " + originalPicture + "\n Id : " + Id;
+		}
 	}
 }
 

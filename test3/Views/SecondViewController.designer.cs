@@ -40,11 +40,27 @@ namespace test3
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblDataPValue { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblP0 { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblSuccess { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel txtAveValue { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel txtDataValue { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel txtP0Value { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
@@ -72,6 +88,10 @@ namespace test3
 				lblData.Dispose ();
 				lblData = null;
 			}
+			if (lblDataPValue != null) {
+				lblDataPValue.Dispose ();
+				lblDataPValue = null;
+			}
 			if (lblP0 != null) {
 				lblP0.Dispose ();
 				lblP0 = null;
@@ -79,6 +99,18 @@ namespace test3
 			if (lblSuccess != null) {
 				lblSuccess.Dispose ();
 				lblSuccess = null;
+			}
+			if (txtAveValue != null) {
+				txtAveValue.Dispose ();
+				txtAveValue = null;
+			}
+			if (txtDataValue != null) {
+				txtDataValue.Dispose ();
+				txtDataValue = null;
+			}
+			if (txtP0Value != null) {
+				txtP0Value.Dispose ();
+				txtP0Value = null;
 			}
 		}
 	}

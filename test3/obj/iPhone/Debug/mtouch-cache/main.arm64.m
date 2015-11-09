@@ -4,7 +4,11 @@ extern void *mono_aot_module_test3_info;
 extern void *mono_aot_module_Xamarin_iOS_info;
 extern void *mono_aot_module_mscorlib_info;
 extern void *mono_aot_module_System_info;
+extern void *mono_aot_module_System_Core_info;
+extern void *mono_aot_module_Mono_Dynamic_Interpreter_info;
 extern void *mono_aot_module_Calabash_info;
+extern void *mono_aot_module_Newtonsoft_Json_info;
+extern void *mono_aot_module_System_Runtime_Serialization_info;
 
 void xamarin_register_modules ()
 {
@@ -12,7 +16,11 @@ void xamarin_register_modules ()
 	mono_aot_register_module (mono_aot_module_Xamarin_iOS_info);
 	mono_aot_register_module (mono_aot_module_mscorlib_info);
 	mono_aot_register_module (mono_aot_module_System_info);
+	mono_aot_register_module (mono_aot_module_System_Core_info);
+	mono_aot_register_module (mono_aot_module_Mono_Dynamic_Interpreter_info);
 	mono_aot_register_module (mono_aot_module_Calabash_info);
+	mono_aot_register_module (mono_aot_module_Newtonsoft_Json_info);
+	mono_aot_register_module (mono_aot_module_System_Runtime_Serialization_info);
 
 }
 

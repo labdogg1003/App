@@ -1,10 +1,8 @@
 ﻿using System;
-using System;
 using Foundation;
 using UIKit;
 using System.CodeDom.Compiler;
-using Foundation;
-using UIKit;
+
 
 namespace test3
 {

@@ -19,7 +19,7 @@ namespace test3
 		{
 		}
 
-		public String CalculatePValue(string pic)
+		public static String CalculatePValue(string pic)
 		{
 			UIImage uiImagePic = new UIImage(pic);
 
@@ -84,7 +84,7 @@ namespace test3
 
 		}
 
-		public String CalculatePValue(UIImage image)
+		public static String CalculatePValue(UIImage image)
 		{
 			UIImage uiImagePic = image;
 
