@@ -20,7 +20,7 @@ namespace test3
 		UIImage P0Image;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
-		UIImage photo;
+		//UIImage photo;
 
 		public DataViewController (IntPtr handle) : base (handle)
 		{
@@ -33,21 +33,8 @@ namespace test3
 			//Load the base Method.
 			base.ViewDidLoad ();
 
-			//When we push the button, we will take a photo for the data image
-	
+			//TODO : Show the data From the dataSet that is passed In.
 
-			/*//When we push the button, we will take a photo for the p0 image
-			P0Button.TouchUpInside += (o, e) => 
-			{
-				Camera.TakePicture(this, (obj) =>
-					{
-						photo = obj.ValueForKey(new NSString("UIImagePickerControllerOriginalImage")) as UIImage;
-						P0Image = photo;
-					});
-
-				//set that image as the button image
-				P0Button.SetImage(P0Image, UIControlState.Normal);
-			};*/
 		}
 	}
 }

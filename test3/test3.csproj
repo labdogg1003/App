@@ -148,6 +148,7 @@
     <BundleResource Include="Resources\blurred-background-1.jpg" />
     <BundleResource Include="Resources\Pics\monkey.jpeg" />
     <BundleResource Include="Resources\Pics\DefaultPicture.png" />
+    <BundleResource Include="Resources\Pics\TapToAddPicture.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Pics\" />

@@ -16,9 +16,8 @@ namespace test3
 	partial class SecondViewController : UIViewController
 	{
 		//These are the two images we write to in this view for buttons.
-		UIImage dataImage = UIImage.FromBundle("Pics/DefaultPicture.png");
-		UIImage P0Image = UIImage.FromBundle("Pics/DefaultPicture.png");
-		ImageProcessing process = new ImageProcessing();
+		UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
+		UIImage P0Image = UIImage.FromBundle("Pics/TapToAddPicture.png");
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
@@ -40,34 +39,38 @@ namespace test3
 			base.ViewDidLoad ();
 
 			//When we push the button, we will take a photo for the data image
-			btnDataPhoto.TouchUpInside += (o, e) => {
+			btnDataPhoto.TouchUpInside += (o, e) => 
+			{
 				//Call camera and ask it to take a picture
-				Camera.TakePicture (this, (obj) => {
+				Camera.TakePicture (this, (obj) => 
+				{
 					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
 					dataImage = photo;
 
 				});
 
-				//set that image as the button image
+				//Set The Image As The Button Image
 				btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
 				UpdateValues (txtDataValue, dataImage);
 			};
 
 			//When we push the button, we will take a photo for the p0 image
-			btnP0Photo.TouchUpInside += (o, e) => {
-				Camera.TakePicture (this, (obj) => {
+			btnP0Photo.TouchUpInside += (o, e) => 
+			{
+				Camera.TakePicture (this, (obj) => 
+				{
 					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
 					P0Image = photo;
 				});
 
-				//set that image as the button image
+				//Set The Image As The Button Image
 				btnP0Photo.SetImage (P0Image, UIControlState.Normal);
 				UpdateValues (txtP0Value, P0Image);
 			};
 
 			btnSave.TouchUpInside += (o, e) => 
 			{
-				//Alert The user that it needs a name
+				//Alert The User That Their Data Needs A Name
 				AlertGetName();
 			};
 		}
@@ -94,7 +97,8 @@ namespace test3
 			var tcs = new TaskCompletionSource<int>();
 
 			//Check What Button Was Pressed
-			alert.Clicked += (sender, buttonArgs) => {
+			alert.Clicked += (sender, buttonArgs) => 
+			{
 				buttonClicked = (int)buttonArgs.ButtonIndex;
 				tcs.TrySetResult ((int)buttonArgs.ButtonIndex);
 			};
@@ -106,28 +110,26 @@ namespace test3
 			//After Press Get Our Text From TextBox
 			string text = alert.GetTextField(0).Text;
 
-			//Check That We Clicked The Right Button.
-			if (buttonClicked == 0) 
+			if (buttonClicked == 0) //Cancel Button Clicked
 			{
-				Console.WriteLine ("Cancel Button Clicked : Not Saving Any Data!");
+				//Do Nothing
 			}
-			else if (buttonClicked == 1) 
+			else if (buttonClicked == 1) //Submit Button Clicked
 			{
-				Console.WriteLine ("Submit Button Clicked : Saving All The Data!");
-
 				DataSet dataSet = new DataSet()
 				{
 					dataSetName = text	
 				};
-
-				//Save Data To JSON
-				try 
+						
+				try //This Has A Possibility To Crash The Program
 				{
+					//Try Saving Our Data Set To JSON
 					dataService.SaveDataSet (dataSet);
 
 					//Has to be called after dataService because Id needs to be assigned by JSON
 					SaveImageToFile(dataSet.dataSetName + "P0" + dataSet.Id, P0Image);
 					SaveImageToFile(dataSet.dataSetName + "Data" + dataSet.Id, dataImage);
+
 				} 
 				catch (Exception e) 
 				{
@@ -139,12 +141,14 @@ namespace test3
 			{
 				Console.WriteLine ("Alert Was Closed Unnaturally: What Happened?");
 			}
+
+			dataService.RefreshCache();
 		}
 
 		//NEEDS TO BE TESTED IRL; Should reset image to the default image.
 		public void ResetImage(UIImage image)
 		{
-			image = UIImage.FromBundle("Pics/DefaultPicture.png");
+			image = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		}
 
 		//Takes a filename (dataset name + imageType (Po or data) + id , and the image)
@@ -153,13 +157,17 @@ namespace test3
 			string jpgFilename = System.IO.Path.Combine (dataService._storagePath, filename + ".jpg");
 			NSData imgData = image.AsJPEG();
 			NSError err = null;
-			if (imgData.Save(jpgFilename, false, out err)) {
+			if (imgData.Save(jpgFilename, false, out err)) 
+			{
 				Console.WriteLine("saved as " + jpgFilename);
-			} else {
+			} 
+			else 
+			{
 				Console.WriteLine("NOT saved as " + jpgFilename + " because" + err.LocalizedDescription);
 			}
 		}
 
+		//Using to test labels right now.
 		public void UpdateValues (UILabel label ,UIImage image)
 		{
 			label.Text = ImageProcessing.CalculatePValue (image);  

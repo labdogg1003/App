@@ -43,16 +43,29 @@ namespace test3
 		{
 			switch (editingStyle) {
 			case UITableViewCellEditingStyle.Delete:
-				Console.WriteLine (((DataSet)tableItems [indexPath.Row]).ToString ());
 				// remove the item from the underlying data source
 				DataSet dataSet = ((DataSet)tableItems [indexPath.Row]);
 				dataService.DeleteDataSet (dataSet);
+				dataService.RefreshCache ();
 				deleteImageInDirectory (dataSet.dataSetName + "Data" + dataSet.Id);
 				deleteImageInDirectory (dataSet.dataSetName + "P0" + dataSet.Id);
 				//Remove From The Table
 				tableItems.RemoveAt (indexPath.Row);
 				// delete the row from the table
 				tableView.DeleteRows (new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
+
+				Console.WriteLine("Data Service Sets :");
+				foreach (DataSet element in dataService.DataSets)
+				{
+					Console.WriteLine (element.dataSetName);
+				}
+
+				Console.WriteLine("Table Items :");
+				foreach (DataSet element in tableItems)
+				{
+					Console.WriteLine (element.dataSetName);
+				}
+
 				break;
 			case UITableViewCellEditingStyle.None:
 				Console.WriteLine ("CommitEditingStyle:None called");

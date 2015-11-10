@@ -363,6 +363,7 @@
                             <outlet property="dataSource" destination="362" id="364"/>
                             <outlet property="delegate" destination="362" id="365"/>
                         </connections>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     </tableView>
                     <connections>
                     </connections>
@@ -381,6 +382,7 @@
         <image name="blurred-background-1.jpg" width="700" height="525"/>
         <image name="Pics/monkey.jpeg" width="284" height="177"/>
         <image name="Pics/DefaultPicture.png" width="1024" height="768"/>
+        <image name="Pics/TapToAddPicture.png" width="1024" height="768"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedScreenMetrics key="destination" type="retina4"/>

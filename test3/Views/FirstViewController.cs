@@ -50,35 +50,6 @@ namespace StoryboardTable
 		//		}
 		//	}
 		//}
-			
-
-		public void CreateTask ()
-		{
-			// first, add the task to the underlying data
-			var newId = dataSet[dataSet.Count - 1].Id + 1;
-			var newDataSet = new DataSet(){Id=newId};
-			dataSet.Add (newDataSet);
-
-
-
-		    // then open the detail view to edit it
-			//var detail = Storyboard.InstantiateViewController("detail") as TaskDetailViewController;
-			//detail.SetTask (this, newChore);
-			//NavigationController.PushViewController (detail, true); */
-		}
-
-		public void SaveTask (DataSet dataSet)
-		{
-			//var oldTask = chores.Find(t => t.Id == chore.Id);
-			//NavigationController.PopViewController(true);
-		}
-
-		public void DeleteTask (DataSet dataSet)
-		{
-			//var oldTask = chores.Find(t => t.Id == chore.Id);
-			//chores.Remove (oldTask);
-			//NavigationController.PopViewController(true);
-		}
 
 		public override void DidReceiveMemoryWarning ()
 		{
@@ -93,35 +64,34 @@ namespace StoryboardTable
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-
-			 //Perform any additional setup after loading the view, typically from a nib.
-			//AddButton.Clicked += (sender, e) => {
-			//CreateTask ();
-		    //};
 		}
 
 		public override void ViewWillAppear (bool animated)
 		{
 			base.ViewWillAppear (animated);
-
-			// bind every time, to reflect deletion in the Detail view
-			TableView.Source = new RootTableSource(dataSet);
-			dataService.RefreshCache ();
-
-			dataSet = new List<DataSet> ();
-
 		}
 
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
-			Console.WriteLine ("View Did Appear");
+
+			//Reset Our List
+			dataSet = new List<DataSet> ();
+
+			//Refresh The Json Cache
 			dataService.RefreshCache ();
 
+			//Reset Our Table View
+			TableView.Source = new RootTableSource(dataSet);
+
+			//Add Our Data To The List
 			foreach (DataSet element in dataService.DataSets)
 			{
 				dataSet.Add(element);
 			}
+
+			//Reload The Table
+			this.TableView.ReloadData ();
 		}
 
 		public override void ViewWillDisappear (bool animated)
@@ -135,7 +105,6 @@ namespace StoryboardTable
 		}
 
 		#endregion
-
 	}
 }
 

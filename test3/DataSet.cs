@@ -14,12 +14,10 @@ using System.Threading.Tasks;
 
 namespace test3
 {
-	//Holds all data pertaining to a dataset including the pictures and the name of the dataSet
-	//All other data is derived from the images contained in the dataset;
+	//Holds all data pertaining to a dataset including name of the dataSet and the Id
+	//Images Are Derived from the datasetname and the Id which gives it a unique identifier;
 	public class DataSet
 	{
-		public UIImage changePicture { get; set;}
-		public UIImage originalPicture { get; set;}
 		public string dataSetName { get; set;}
 		public int? Id { get; set; }
 
@@ -30,7 +28,7 @@ namespace test3
 
 		public override string ToString()
 		{
-			return "Name : " + dataSetName + "\n Change Image :" + changePicture + "\n Original Image : " + originalPicture + "\n Id : " + Id;
+			return "Name : " + dataSetName + "\n Id : " + Id;
 		}
 	}
 }

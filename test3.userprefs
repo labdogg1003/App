@@ -1,12 +1,17 @@
 ﻿<Properties StartupItem="test3/test3.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Helpers/RootTableSource.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/DataViewController.cs">
     <Files>
-      <File FileName="test3/DataSet.cs" Line="33" Column="133" />
-      <File FileName="test3/Views/SecondViewController.cs" Line="25" Column="127" />
-      <File FileName="test3/Views/FirstViewController.cs" Line="119" Column="32" />
-      <File FileName="test3/Helpers/RootTableSource.cs" Line="66" Column="3" />
-      <File FileName="test3/DataSetJsonService.cs" Line="82" Column="47" />
+      <File FileName="test3/DataSet.cs" Line="1" Column="1" />
+      <File FileName="test3/Views/SecondViewController.cs" Line="1" Column="1" />
+      <File FileName="test3/Views/FirstViewController.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/RootTableSource.cs" Line="1" Column="1" />
+      <File FileName="test3/DataSetJsonService.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/ImageProcessing.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/Camera.cs" Line="64" Column="1" />
+      <File FileName="test3/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="test3/Views/DataViewController.cs" Line="19" Column="11" />
+      <File FileName="test3/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
