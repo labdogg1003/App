@@ -18,7 +18,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 8,1
-	.asciz "Mono AOT Compiler 4.0.4 (mono-4.0.0-branch-c5sr4/5ab4c0d Mon Aug 24 14:58:59 EDT 2015)"
+	.asciz "Mono AOT Compiler 4.0.4 (xcode7-c5/751e0fa Wed Oct 21 22:49:27 EDT 2015)"
 	.asciz "System.Runtime.Serialization.dll"
 	.asciz ""
 
@@ -302,7 +302,7 @@ image_table:
 
 	.long 1,2,0,5,0
 	.asciz "mscorlib"
-	.asciz "C8CB9590-CFD6-4191-A87F-45439AF03A21"
+	.asciz "4D8ADC30-0E43-4191-BC92-7BE34DCB9230"
 	.asciz ""
 	.asciz "7cec85d7bea7798e"
 	.align 3
@@ -414,9 +414,9 @@ blob:
 	.byte 16,6,4,2,0,14,20,16,32,208,0,0,29,16,0,2,1,16,6,4,2,0,14,20,16,32,208,0,0,29,16,0
 	.byte 2,1,16,6,4,2,0,14,20,16,32,208,0,0,29,16,0,2,1,16,6,4,2,0,14,20,16,32,208,0,0,29
 	.byte 16,0,2,1,16,6,4,2,0,14,20,16,32,208,0,0,29,16,0,2,1,16,6,4,0,128,144,16,0,0,1,4
-	.byte 128,128,17,0,0,1,193,0,19,174,193,0,17,155,193,0,19,170,193,0,17,160,4,128,160,32,0,0,8,193,0,19
-	.byte 174,193,0,17,155,193,0,19,170,193,0,17,160,4,128,160,24,0,0,8,193,0,19,174,193,0,17,155,193,0,19,170
-	.byte 193,0,17,160,4,128,144,16,0,0,1,193,0,19,174,193,0,17,155,193,0,19,170,193,0,17,160,115,103,101,110,0
+	.byte 128,128,17,0,0,1,193,0,19,181,193,0,17,161,193,0,19,177,193,0,17,166,4,128,160,32,0,0,8,193,0,19
+	.byte 181,193,0,17,161,193,0,19,177,193,0,17,166,4,128,160,24,0,0,8,193,0,19,181,193,0,17,161,193,0,19,177
+	.byte 193,0,17,166,4,128,144,16,0,0,1,193,0,19,181,193,0,17,161,193,0,19,177,193,0,17,166,115,103,101,110,0
 .section __TEXT, __const
 	.align 3
 Lglobals_hash:
@@ -866,8 +866,8 @@ Ldebug_line_start:
 	.long Ldebug_line_header_end - . -4
 	.byte 1,1,251,14,13,0,1,1,1,1,0,0,0,1,0,0,1
 .section __DWARF, __debug_line,regular,debug
-	.asciz "//Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.5.26/src/mono/external/referencesource/System.Runtime.Serialization/System/Runtime/Serialization"
-	.asciz "//Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.5.26/src/mono/mcs/class/System.Runtime.Serialization/System.Runtime.Serialization"
+	.asciz "/Users/builder/data/lanes/2320/7426bd76/source/maccore/_build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/external/referencesource/System.Runtime.Serialization/System/Runtime/Serialization"
+	.asciz "/Users/builder/data/lanes/2320/7426bd76/source/maccore/_build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/System.Runtime.Serialization/System.Runtime.Serialization"
 
 	.byte 0
 	.asciz "DataContractAttribute.cs"

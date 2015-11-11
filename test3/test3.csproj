@@ -152,6 +152,7 @@
     <BundleResource Include="Resources\Pics\monkey.jpeg" />
     <BundleResource Include="Resources\Pics\DefaultPicture.png" />
     <BundleResource Include="Resources\Pics\TapToAddPicture.png" />
+    <BundleResource Include="Resources\Pics\IMG_0298.JPG" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\Pics\" />

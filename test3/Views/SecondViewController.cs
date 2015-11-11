@@ -16,8 +16,9 @@ namespace test3
 	partial class SecondViewController : UIViewController
 	{
 		//These are the two images we write to in this view for buttons.
-		UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
+		//UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		UIImage P0Image = UIImage.FromBundle("Pics/TapToAddPicture.png");
+		UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
@@ -45,10 +46,11 @@ namespace test3
 				Camera.TakePicture (this, (obj) => 
 				{
 					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
+	
 					dataImage = photo;
+
+					dataImage =	ImageProcessing.MaxResizeImage(photo, 1124f, 1499f); // 45% original size
 					UpdateValues (txtDataValue, dataImage);
-
-
 				});
 
 				//Set The Image As The Button Image
