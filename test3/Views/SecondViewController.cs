@@ -46,12 +46,13 @@ namespace test3
 				{
 					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
 					dataImage = photo;
+					UpdateValues (txtDataValue, dataImage);
+
 
 				});
 
 				//Set The Image As The Button Image
 				btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
-				UpdateValues (txtDataValue, dataImage);
 			};
 
 			//When we push the button, we will take a photo for the p0 image
@@ -61,11 +62,12 @@ namespace test3
 				{
 					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
 					P0Image = photo;
+					UpdateValues (txtDataValue, P0Image);
+
 				});
 
 				//Set The Image As The Button Image
 				btnP0Photo.SetImage (P0Image, UIControlState.Normal);
-				UpdateValues (txtP0Value, P0Image);
 			};
 
 			btnSave.TouchUpInside += (o, e) => 
@@ -81,6 +83,7 @@ namespace test3
 
 			btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
 			btnP0Photo.SetImage (P0Image, UIControlState.Normal);
+
 		}
 
 		private async void AlertGetName()
