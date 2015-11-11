@@ -236,7 +236,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" id="cPa-gy-q4n" systemItem="search"/>
+                    <tabBarItem key="tabBarItem" id="cPa-gy-q4n" title="Capture"/>
                     <connections>
                         <outlet property="btnP0Photo" destination="239" id="name-outlet-239"/>
                         <outlet property="btnDataPhoto" destination="241" id="name-outlet-241"/>
@@ -318,7 +318,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" id="284" systemItem="bookmarks"/>
+                    <tabBarItem key="tabBarItem" id="284" title="Details"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imgDataPhoto" destination="439" id="name-outlet-439"/>

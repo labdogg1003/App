@@ -46,11 +46,11 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		0T1aTP9D10eezqJPt0KXrcfqGLw=
+		vYCBJBUbAf84vvJmyGb9twte16g=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		OQByASwSY5bUpKhkr8MHg+aomsU=
+		CmYWKWkUSsrQMJraJMtFScqSOug=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -62,11 +62,11 @@
 		</data>
 		<key>.monotouch-32/test3.exe</key>
 		<data>
-		AmTIxN5f3ZlmoOSmALTWQ4xZaSI=
+		SHJ7SWKWwpqge5XuhdB0VafD0F8=
 		</data>
 		<key>.monotouch-32/test3.exe.mdb</key>
 		<data>
-		D//vvZQmDODhM9bDGkgg/ppPjoQ=
+		AaXseoK9IZ8D7Z69PFqFLMz3FvQ=
 		</data>
 		<key>.monotouch-64/Calabash.dll</key>
 		<data>
@@ -110,11 +110,11 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		aObfV2p1iaA+P+ZESs2GimG4nFw=
+		oOyv1uj399p2yTsYD1tXqr+Xpp4=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		LUGrr1H1+ZCHre57A+ldoBh+jis=
+		yTxZUDFT2z9gzIIs4T265EMSsmA=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
@@ -126,11 +126,11 @@
 		</data>
 		<key>.monotouch-64/test3.exe</key>
 		<data>
-		AmTIxN5f3ZlmoOSmALTWQ4xZaSI=
+		SHJ7SWKWwpqge5XuhdB0VafD0F8=
 		</data>
 		<key>.monotouch-64/test3.exe.mdb</key>
 		<data>
-		D//vvZQmDODhM9bDGkgg/ppPjoQ=
+		AaXseoK9IZ8D7Z69PFqFLMz3FvQ=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -146,15 +146,15 @@
 		</data>
 		<key>Main.storyboardc/260-view-261.nib</key>
 		<data>
-		ebt9KmV2sUGy5qG/6zebr2j0Cv4=
+		JeY7MgKfCuXr0KwExeewo/VWO/8=
 		</data>
 		<key>Main.storyboardc/362-view-363.nib</key>
 		<data>
-		6np/k9lw2TaHPKt4vk6fMi+wQSY=
+		JW1V/7buDcxbu9EvZCs3pTEKYsk=
 		</data>
 		<key>Main.storyboardc/8rJ-Kc-sve-view-QS5-Rx-YEW.nib</key>
 		<data>
-		+TdMVd8BU0VCOTPbSIo6S0NrVPM=
+		lEUAW0ZJQImYvoQl4y99UOqHOuU=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -162,7 +162,7 @@
 		</data>
 		<key>Main.storyboardc/UIViewController-49e-Tb-3d3.nib</key>
 		<data>
-		j8Smz1wxcCijRPhKFOyDAg8890w=
+		pPJ/ohjsaMZbz0QOJ8kRDZN4d5w=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -175,6 +175,10 @@
 		<key>Pics/DefaultPicture.png</key>
 		<data>
 		IbfZoavkx/ulRZ8g2qVeeWmpGqg=
+		</data>
+		<key>Pics/TapToAddPicture.png</key>
+		<data>
+		IIQMHaFsaCyXl634C05cmg2FDZ4=
 		</data>
 		<key>Pics/monkey.jpeg</key>
 		<data>
@@ -265,11 +269,11 @@
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll</key>
 		<data>
-		0T1aTP9D10eezqJPt0KXrcfqGLw=
+		vYCBJBUbAf84vvJmyGb9twte16g=
 		</data>
 		<key>.monotouch-32/Xamarin.iOS.dll.mdb</key>
 		<data>
-		OQByASwSY5bUpKhkr8MHg+aomsU=
+		CmYWKWkUSsrQMJraJMtFScqSOug=
 		</data>
 		<key>.monotouch-32/mscorlib.dll</key>
 		<data>
@@ -281,11 +285,11 @@
 		</data>
 		<key>.monotouch-32/test3.exe</key>
 		<data>
-		AmTIxN5f3ZlmoOSmALTWQ4xZaSI=
+		SHJ7SWKWwpqge5XuhdB0VafD0F8=
 		</data>
 		<key>.monotouch-32/test3.exe.mdb</key>
 		<data>
-		D//vvZQmDODhM9bDGkgg/ppPjoQ=
+		AaXseoK9IZ8D7Z69PFqFLMz3FvQ=
 		</data>
 		<key>.monotouch-64/Calabash.dll</key>
 		<data>
@@ -329,11 +333,11 @@
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll</key>
 		<data>
-		aObfV2p1iaA+P+ZESs2GimG4nFw=
+		oOyv1uj399p2yTsYD1tXqr+Xpp4=
 		</data>
 		<key>.monotouch-64/Xamarin.iOS.dll.mdb</key>
 		<data>
-		LUGrr1H1+ZCHre57A+ldoBh+jis=
+		yTxZUDFT2z9gzIIs4T265EMSsmA=
 		</data>
 		<key>.monotouch-64/mscorlib.dll</key>
 		<data>
@@ -345,11 +349,11 @@
 		</data>
 		<key>.monotouch-64/test3.exe</key>
 		<data>
-		AmTIxN5f3ZlmoOSmALTWQ4xZaSI=
+		SHJ7SWKWwpqge5XuhdB0VafD0F8=
 		</data>
 		<key>.monotouch-64/test3.exe.mdb</key>
 		<data>
-		D//vvZQmDODhM9bDGkgg/ppPjoQ=
+		AaXseoK9IZ8D7Z69PFqFLMz3FvQ=
 		</data>
 		<key>Assets.car</key>
 		<data>
@@ -365,15 +369,15 @@
 		</data>
 		<key>Main.storyboardc/260-view-261.nib</key>
 		<data>
-		ebt9KmV2sUGy5qG/6zebr2j0Cv4=
+		JeY7MgKfCuXr0KwExeewo/VWO/8=
 		</data>
 		<key>Main.storyboardc/362-view-363.nib</key>
 		<data>
-		6np/k9lw2TaHPKt4vk6fMi+wQSY=
+		JW1V/7buDcxbu9EvZCs3pTEKYsk=
 		</data>
 		<key>Main.storyboardc/8rJ-Kc-sve-view-QS5-Rx-YEW.nib</key>
 		<data>
-		+TdMVd8BU0VCOTPbSIo6S0NrVPM=
+		lEUAW0ZJQImYvoQl4y99UOqHOuU=
 		</data>
 		<key>Main.storyboardc/Info.plist</key>
 		<data>
@@ -381,7 +385,7 @@
 		</data>
 		<key>Main.storyboardc/UIViewController-49e-Tb-3d3.nib</key>
 		<data>
-		j8Smz1wxcCijRPhKFOyDAg8890w=
+		pPJ/ohjsaMZbz0QOJ8kRDZN4d5w=
 		</data>
 		<key>MonoTouchDebugConfiguration.txt</key>
 		<data>
@@ -394,6 +398,10 @@
 		<key>Pics/DefaultPicture.png</key>
 		<data>
 		IbfZoavkx/ulRZ8g2qVeeWmpGqg=
+		</data>
+		<key>Pics/TapToAddPicture.png</key>
+		<data>
+		IIQMHaFsaCyXl634C05cmg2FDZ4=
 		</data>
 		<key>Pics/monkey.jpeg</key>
 		<data>

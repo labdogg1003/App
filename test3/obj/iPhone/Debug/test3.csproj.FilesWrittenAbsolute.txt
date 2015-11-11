@@ -25,3 +25,4 @@
 /Users/bobwise/Documents/App/test3/bin/iPhone/Debug/Xamarin.Forms.Xaml.dll
 /Users/bobwise/Documents/App/test3/bin/iPhone/Debug/Xamarin.Forms.Platform.dll
 /Users/bobwise/Documents/App/test3/bin/iPhone/Debug/Newtonsoft.Json.dll
+/Users/bobwise/Documents/App/test3/obj/iPhone/Debug/Pics/TapToAddPicture.png
