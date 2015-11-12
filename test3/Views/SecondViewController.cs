@@ -16,9 +16,9 @@ namespace test3
 	partial class SecondViewController : UIViewController
 	{
 		//These are the two images we write to in this view for buttons.
-		//UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		UIImage P0Image = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
+		NSString nString = new NSString ("UIImagePickerControllerOriginalImage");
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
@@ -45,16 +45,16 @@ namespace test3
 				//Call camera and ask it to take a picture
 				Camera.TakePicture (this, (obj) => 
 				{
-					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
+					photo = obj.ValueForKey (nString) as UIImage;
 	
-					dataImage = photo;
-
-					dataImage =	ImageProcessing.MaxResizeImage(photo, 1124f, 1499f); // 45% original size
+					dataImage = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
+					
 					UpdateValues (txtDataValue, dataImage);
 				});
-
+				
 				//Set The Image As The Button Image
 				btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
+
 			};
 
 			//When we push the button, we will take a photo for the p0 image
@@ -62,10 +62,11 @@ namespace test3
 			{
 				Camera.TakePicture (this, (obj) => 
 				{
-					photo = obj.ValueForKey (new NSString ("UIImagePickerControllerOriginalImage")) as UIImage;
-					P0Image = photo;
-					UpdateValues (txtDataValue, P0Image);
-
+					photo = obj.ValueForKey (nString) as UIImage;
+					
+					P0Image = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
+					
+					UpdateValues (txtP0Value, P0Image);
 				});
 
 				//Set The Image As The Button Image
@@ -144,7 +145,7 @@ namespace test3
 			}
 			else
 			{
-				Console.WriteLine ("Alert Was Closed Unnaturally: What Happened?");
+				Console.WriteLine ("Alert : View Was Closed Unnaturally, What Happened?");
 			}
 
 			dataService.RefreshCache();

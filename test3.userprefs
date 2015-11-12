@@ -1,40 +1,13 @@
-﻿<Properties StartupItem="test3/test3.csproj" RefactoringSettings.EnableRefactorings="True">
-<<<<<<< Updated upstream
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/DataViewController.cs">
+﻿<Properties StartupItem="test3/test3.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/SecondViewController.cs">
     <Files>
-      <File FileName="test3/DataSet.cs" Line="1" Column="1" />
-      <File FileName="test3/Views/SecondViewController.cs" Line="1" Column="1" />
-      <File FileName="test3/Views/FirstViewController.cs" Line="1" Column="1" />
-      <File FileName="test3/Helpers/RootTableSource.cs" Line="1" Column="1" />
-      <File FileName="test3/DataSetJsonService.cs" Line="1" Column="1" />
-      <File FileName="test3/Helpers/ImageProcessing.cs" Line="1" Column="1" />
-      <File FileName="test3/Helpers/Camera.cs" Line="64" Column="1" />
-      <File FileName="test3/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="test3/Views/DataViewController.cs" Line="19" Column="11" />
-      <File FileName="test3/Info.plist" />
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.iPod touch" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/FirstViewController.cs">
-    <Files>
-      <File FileName="test3/TableSource.cs" Line="1" Column="1" />
-      <File FileName="test3/Main.cs" Line="1" Column="1" />
-      <File FileName="test3/TableData.cs" Line="1" Column="1" />
-      <File FileName="test3/OutputRecorder.cs" Line="1" Column="1" />
-      <File FileName="test3/DataSet.cs" Line="1" Column="1" />
-      <File FileName="test3/packages.config" Line="1" Column="1" />
-      <File FileName="test3/Views/DataViewController.cs" Line="1" Column="1" />
-      <File FileName="test3/Views/FirstViewController.cs" Line="11" Column="3" />
-      <File FileName="test3/Views/SecondViewController.cs" Line="1" Column="1" />
-      <File FileName="test3/Info.plist" />
-      <File FileName="test3/Entitlements.plist" />
->>>>>>> Stashed changes
+      <File FileName="test3/Helpers/ImageProcessing.cs" Line="147" Column="7" />
+      <File FileName="test3/Views/SecondViewController.cs" Line="26" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/bobwise/Documents/App/test3/DataSet.cs" line="17" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

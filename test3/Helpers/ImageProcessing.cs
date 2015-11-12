@@ -122,7 +122,7 @@ namespace test3
 					for (int i = 0; i < bytes_per_pixel; i++)
 						pixel [i] = bytes [row * bpr + col * bytes_per_pixel + i];
 
-					Console.Write("(");
+					//Console.Write("(");
 					for(nint x = 0; x < bytes_per_pixel; x++)
 					{
 						//pixel[0] is r
@@ -134,17 +134,17 @@ namespace test3
 						powerValueTot += curPower;
 						powerValueAvg = powerValueTot / numPixels;
 
-						Console.Write(pixel[x]);
-						if( x < bytes_per_pixel - 1 )
-							Console.Write(",");
+					//	Console.Write(pixel[x]);
+					//	if( x < bytes_per_pixel - 1 )
+					//		Console.Write(",");
 					}
 
-					Console.Write(")");
-					if( col < width - 1 )
-						Console.Write(", ");
+					//Console.Write(")");
+					//if( col < width - 1 )
+					//	Console.Write(", ");
 				}
 
-				Console.Write("\n");
+				//Console.Write("\n");
 			}
 			string outputToName;
 			outputToName = "Avg Power=" + powerValueAvg.ToString ("0.0000") + " Tot Power=" + powerValueTot.ToString ("0.0000");
@@ -160,6 +160,19 @@ namespace test3
 			if (maxResizeFactor > 1) return sourceImage;
 			float width = ((float)(maxResizeFactor * sourceSize.Width));
 			float height =((float)(maxResizeFactor * sourceSize.Height));
+			UIGraphics.BeginImageContext(new SizeF(width, height));
+			sourceImage.Draw(new RectangleF(0, 0, width, height));
+			var resultImage = UIGraphics.GetImageFromCurrentImageContext();
+			UIGraphics.EndImageContext();
+			return resultImage;
+		}
+
+		public static UIImage MaxResizeImage(UIImage sourceImage, float percent)
+		{
+			var sourceSize = sourceImage.Size;
+			float width = ((float)(percent * sourceSize.Width));
+			float height =((float)(percent * sourceSize.Height));
+			Console.WriteLine ("New Height : " + height + "\n New Width : " + width);
 			UIGraphics.BeginImageContext(new SizeF(width, height));
 			sourceImage.Draw(new RectangleF(0, 0, width, height));
 			var resultImage = UIGraphics.GetImageFromCurrentImageContext();
