@@ -27,3 +27,5 @@
 /Users/labdog/Projects/test3/test3/bin/iPhone/Debug/Xamarin.Forms.Xaml.dll
 /Users/labdog/Projects/test3/test3/bin/iPhone/Debug/Xamarin.Forms.Platform.dll
 /Users/labdog/Projects/test3/test3/bin/iPhone/Debug/Newtonsoft.Json.dll
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/Main.storyboardc/625-view-626.nib
+/Users/labdog/Projects/test3/test3/obj/iPhone/Debug/ibtool/Main.storyboardc/UIViewController-625.nib

@@ -16,21 +16,29 @@ namespace test3
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIImageView imgDataPhoto { get; set; }
+		UIImageView imgData { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UIImageView imgP0Photo { get; set; }
+		UIImageView imgP0 { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblStatus { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (imgDataPhoto != null) {
-				imgDataPhoto.Dispose ();
-				imgDataPhoto = null;
+			if (imgData != null) {
+				imgData.Dispose ();
+				imgData = null;
 			}
-			if (imgP0Photo != null) {
-				imgP0Photo.Dispose ();
-				imgP0Photo = null;
+			if (imgP0 != null) {
+				imgP0.Dispose ();
+				imgP0 = null;
+			}
+			if (lblStatus != null) {
+				lblStatus.Dispose ();
+				lblStatus = null;
 			}
 		}
 	}

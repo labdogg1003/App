@@ -28,7 +28,6 @@ namespace test3
 		public SecondViewController (IntPtr handle) : base (handle)
 		{
 
-
 		}
 
 		public override void ViewDidLoad ()

@@ -391,32 +391,7 @@ static NSString * native_to_managed_trampoline_10 (id self, SEL _cmd, MonoMethod
 }
 
 
-static void native_to_managed_trampoline_11 (id self, SEL _cmd, MonoMethod **managed_method_ptr, BOOL p0, const char *r0, const char *r1, const char *r2)
-{
-	MonoMethod *managed_method = *managed_method_ptr;
-	void *arg_ptrs [1];
-	MonoObject *mthis;
-	if (mono_domain_get () == NULL)
-		mono_jit_thread_attach (NULL);
-	mthis = NULL;
-	if (self) {
-		mthis = xamarin_get_managed_object_for_ptr_fast (self);
-	}
-	if (!managed_method) {
-		const char *paramptr[1] = { r0 };
-		managed_method = xamarin_get_reflection_method_method (xamarin_get_method_direct(r1, r2, 1, paramptr));
-		*managed_method_ptr = managed_method;
-	}
-	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method);
-	arg_ptrs [0] = &p0;
-
-	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
-
-	return;
-}
-
-
-static void native_to_managed_trampoline_12 (id self, SEL _cmd, MonoMethod **managed_method_ptr, id p0, id p1, const char *r0, const char *r1, const char *r2, const char *r3)
+static void native_to_managed_trampoline_11 (id self, SEL _cmd, MonoMethod **managed_method_ptr, id p0, id p1, const char *r0, const char *r1, const char *r2, const char *r3)
 {
 	MonoMethod *managed_method = *managed_method_ptr;
 	void *arg_ptrs [2];
@@ -451,6 +426,31 @@ static void native_to_managed_trampoline_12 (id self, SEL _cmd, MonoMethod **man
 		xamarin_verify_parameter (mobj1, _cmd, self, nsobj1, 1, mono_class_from_mono_type (paramtype1), managed_method);
 	}
 	arg_ptrs [1] = mobj1;
+
+	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
+
+	return;
+}
+
+
+static void native_to_managed_trampoline_12 (id self, SEL _cmd, MonoMethod **managed_method_ptr, BOOL p0, const char *r0, const char *r1, const char *r2)
+{
+	MonoMethod *managed_method = *managed_method_ptr;
+	void *arg_ptrs [1];
+	MonoObject *mthis;
+	if (mono_domain_get () == NULL)
+		mono_jit_thread_attach (NULL);
+	mthis = NULL;
+	if (self) {
+		mthis = xamarin_get_managed_object_for_ptr_fast (self);
+	}
+	if (!managed_method) {
+		const char *paramptr[1] = { r0 };
+		managed_method = xamarin_get_reflection_method_method (xamarin_get_method_direct(r1, r2, 1, paramptr));
+		*managed_method_ptr = managed_method;
+	}
+	xamarin_check_for_gced_object (mthis, _cmd, self, managed_method);
+	arg_ptrs [0] = &p0;
 
 	mono_runtime_invoke (managed_method, mthis, arg_ptrs, NULL);
 
@@ -967,6 +967,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) tableView:(id)p0 commitEditingStyle:(NSInteger)p1 forRowAtIndexPath:(id)p2;
 	-(BOOL) tableView:(id)p0 canEditRowAtIndexPath:(id)p1;
 	-(NSString *) tableView:(id)p0 titleForDeleteConfirmationButtonForRowAtIndexPath:(id)p1;
+	-(void) tableView:(id)p0 didSelectRowAtIndexPath:(id)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 @implementation test3_RootTableSource { } 
@@ -1022,6 +1023,12 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 		return native_to_managed_trampoline_10 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "Foundation.NSIndexPath, Xamarin.iOS", "test3.RootTableSource, test3", "TitleForDeleteConfirmation");
 	}
 
+	-(void) tableView:(id)p0 didSelectRowAtIndexPath:(id)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, "UIKit.UITableView, Xamarin.iOS", "Foundation.NSIndexPath, Xamarin.iOS", "test3.RootTableSource, test3", "RowSelected");
+	}
+
 	-(BOOL) conformsToProtocol:(void *)p0
 	{
 		static MonoMethod *managed_method = NULL;
@@ -1032,16 +1039,16 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 @interface DataViewController : UIViewController {
 	XamarinObject __monoObjectGCHandle;
 }
-	@property (nonatomic, assign) id imgDataPhoto;
-	@property (nonatomic, assign) id imgP0Photo;
+	@property (nonatomic, assign) id imgData;
+	@property (nonatomic, assign) id imgP0;
 	-(void) release;
 	-(id) retain;
 	-(int) xamarinGetGCHandle;
 	-(void) xamarinSetGCHandle: (int) gchandle;
-	-(id) imgDataPhoto;
-	-(void) setImgDataPhoto:(id)p0;
-	-(id) imgP0Photo;
-	-(void) setImgP0Photo:(id)p0;
+	-(id) imgData;
+	-(void) setImgData:(id)p0;
+	-(id) imgP0;
+	-(void) setImgP0:(id)p0;
 	-(void) viewDidLoad;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
@@ -1068,28 +1075,28 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	}
 
 
-	-(id) imgDataPhoto
+	-(id) imgData
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, "test3.DataViewController, test3", "get_imgDataPhoto");
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, "test3.DataViewController, test3", "get_imgData");
 	}
 
-	-(void) setImgDataPhoto:(id)p0
+	-(void) setImgData:(id)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIImageView, Xamarin.iOS", "test3.DataViewController, test3", "set_imgDataPhoto");
+		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIImageView, Xamarin.iOS", "test3.DataViewController, test3", "set_imgData");
 	}
 
-	-(id) imgP0Photo
+	-(id) imgP0
 	{
 		static MonoMethod *managed_method = NULL;
-		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, "test3.DataViewController, test3", "get_imgP0Photo");
+		return native_to_managed_trampoline_3 (self, _cmd, &managed_method, "test3.DataViewController, test3", "get_imgP0");
 	}
 
-	-(void) setImgP0Photo:(id)p0
+	-(void) setImgP0:(id)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIImageView, Xamarin.iOS", "test3.DataViewController, test3", "set_imgP0Photo");
+		native_to_managed_trampoline_4 (self, _cmd, &managed_method, p0, "UIKit.UIImageView, Xamarin.iOS", "test3.DataViewController, test3", "set_imgP0");
 	}
 
 	-(void) viewDidLoad
@@ -1118,6 +1125,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) viewDidAppear:(BOOL)p0;
 	-(void) viewWillDisappear:(BOOL)p0;
 	-(void) viewDidDisappear:(BOOL)p0;
+	-(void) prepareForSegue:(id)p0 sender:(id)p1;
 	-(BOOL) conformsToProtocol:(void *)p0;
 @end
 @implementation FirstViewController { } 
@@ -1158,25 +1166,31 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) viewWillAppear:(BOOL)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewWillAppear");
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewWillAppear");
 	}
 
 	-(void) viewDidAppear:(BOOL)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewDidAppear");
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewDidAppear");
 	}
 
 	-(void) viewWillDisappear:(BOOL)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewWillDisappear");
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewWillDisappear");
 	}
 
 	-(void) viewDidDisappear:(BOOL)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewDidDisappear");
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "StoryboardTable.FirstViewController, test3", "ViewDidDisappear");
+	}
+
+	-(void) prepareForSegue:(id)p0 sender:(id)p1
+	{
+		static MonoMethod *managed_method = NULL;
+		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, "UIKit.UIStoryboardSegue, Xamarin.iOS", "Foundation.NSObject, Xamarin.iOS", "StoryboardTable.FirstViewController, test3", "PrepareForSegue");
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1223,7 +1237,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) imagePickerController:(id)p0 didFinishPickingMediaWithInfo:(id)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, p1, "UIKit.UIImagePickerController, Xamarin.iOS", "Foundation.NSDictionary, Xamarin.iOS", "test3.Camera+CameraDelegate, test3", "FinishedPickingMedia");
+		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, "UIKit.UIImagePickerController, Xamarin.iOS", "Foundation.NSDictionary, Xamarin.iOS", "test3.Camera+CameraDelegate, test3", "FinishedPickingMedia");
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1462,7 +1476,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) viewDidAppear:(BOOL)p0
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "test3.SecondViewController, test3", "ViewDidAppear");
+		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, "System.Boolean, mscorlib", "test3.SecondViewController, test3", "ViewDidAppear");
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1784,7 +1798,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 	-(void) scrollViewWillBeginZooming:(id)p0 withView:(id)p1
 	{
 		static MonoMethod *managed_method = NULL;
-		native_to_managed_trampoline_12 (self, _cmd, &managed_method, p0, p1, "UIKit.UIScrollView, Xamarin.iOS", "UIKit.UIView, Xamarin.iOS", "UIKit.UIScrollView+_UIScrollViewDelegate, Xamarin.iOS", "ZoomingStarted");
+		native_to_managed_trampoline_11 (self, _cmd, &managed_method, p0, p1, "UIKit.UIScrollView, Xamarin.iOS", "UIKit.UIView, Xamarin.iOS", "UIKit.UIScrollView+_UIScrollViewDelegate, Xamarin.iOS", "ZoomingStarted");
 	}
 
 	-(BOOL) conformsToProtocol:(void *)p0
@@ -1816,6 +1830,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 		{"NSNumber", "Foundation.NSNumber, Xamarin.iOS", NULL },
 		{"NSRunLoop", "Foundation.NSRunLoop, Xamarin.iOS", NULL },
 		{"NSString", "Foundation.NSString, Xamarin.iOS", NULL },
+		{"UIStoryboardSegue", "UIKit.UIStoryboardSegue, Xamarin.iOS", NULL },
 		{"UIScrollView", "UIKit.UIScrollView, Xamarin.iOS", NULL },
 		{"UITableView", "UIKit.UITableView, Xamarin.iOS", NULL },
 		{"UITableViewCell", "UIKit.UITableViewCell, Xamarin.iOS", NULL },
@@ -1882,7 +1897,7 @@ static void native_to_managed_trampoline_19 (id self, SEL _cmd, MonoMethod **man
 		__xamarin_registration_assemblies,
 		__xamarin_class_map,
 		9,
-		67,
+		68,
 		12
 	};
 
@@ -1908,52 +1923,53 @@ void xamarin_create_classes () {
 	__xamarin_class_map [18].handle = objc_getClass ("NSNumber");
 	__xamarin_class_map [19].handle = objc_getClass ("NSRunLoop");
 	__xamarin_class_map [20].handle = objc_getClass ("NSString");
-	__xamarin_class_map [21].handle = objc_getClass ("UIScrollView");
-	__xamarin_class_map [22].handle = objc_getClass ("UITableView");
-	__xamarin_class_map [23].handle = objc_getClass ("UITableViewCell");
-	__xamarin_class_map [24].handle = objc_getClass ("NSURL");
-	__xamarin_class_map [25].handle = objc_getClass ("UITextField");
-	__xamarin_class_map [26].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
-	__xamarin_class_map [27].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
-	__xamarin_class_map [28].handle = objc_getClass ("NSAutoreleasePool");
-	__xamarin_class_map [29].handle = objc_getClass ("NSError");
-	__xamarin_class_map [30].handle = objc_getClass ("CIContext");
-	__xamarin_class_map [31].handle = objc_getClass ("NSException");
-	__xamarin_class_map [32].handle = objc_getClass ("NSUserActivity");
-	__xamarin_class_map [33].handle = objc_getClass ("NSNull");
-	__xamarin_class_map [34].handle = objc_getClass ("UITextSelectionRect");
-	__xamarin_class_map [35].handle = objc_getClass ("UILocalNotification");
-	__xamarin_class_map [36].handle = objc_getClass ("UIApplicationShortcutItem");
-	__xamarin_class_map [37].handle = objc_getClass ("UIWindow");
-	__xamarin_class_map [38].handle = objc_getClass ("UITextPosition");
-	__xamarin_class_map [39].handle = objc_getClass ("UITextRange");
-	__xamarin_class_map [40].handle = objc_getClass ("UILabel");
-	__xamarin_class_map [41].handle = objc_getClass ("UIImageView");
-	__xamarin_class_map [42].handle = objc_getClass ("UITouch");
-	__xamarin_class_map [43].handle = objc_getClass ("UIUserNotificationSettings");
-	__xamarin_class_map [44].handle = objc_getClass ("UITableViewRowAction");
-	__xamarin_class_map [45].handle = objc_getClass ("UIFocusAnimationCoordinator");
-	__xamarin_class_map [46].handle = objc_getClass ("UIFocusUpdateContext");
-	__xamarin_class_map [47].handle = objc_getClass ("UIPress");
-	__xamarin_class_map [48].handle = objc_getClass ("UITableViewFocusUpdateContext");
-	__xamarin_class_map [49].handle = objc_getClass ("UITraitCollection");
-	__xamarin_class_map [50].handle = objc_getClass ("NSData");
-	__xamarin_class_map [51].handle = objc_getClass ("NSDictionary");
-	__xamarin_class_map [52].handle = objc_getClass ("UIAlertView");
-	__xamarin_class_map [53].handle = objc_getClass ("NSMutableDictionary");
-	__xamarin_class_map [54].handle = objc_getClass ("UIGestureRecognizer");
-	__xamarin_class_map [55].handle = [AppDelegate class];
-	__xamarin_class_map [56].handle = [test3_RootTableSource class];
-	__xamarin_class_map [57].handle = [DataViewController class];
-	__xamarin_class_map [58].handle = [FirstViewController class];
-	__xamarin_class_map [59].handle = [test3_Camera_CameraDelegate class];
-	__xamarin_class_map [60].handle = [SecondViewController class];
-	__xamarin_class_map [61].handle = objc_getClass ("UIKit_UIAlertView__UIAlertViewDelegate");
-	__xamarin_class_map [62].handle = objc_getClass ("__UIGestureRecognizerToken");
-	__xamarin_class_map [63].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
-	__xamarin_class_map [64].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
-	__xamarin_class_map [65].handle = objc_getClass ("__NSObject_Disposer");
-	__xamarin_class_map [66].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
+	__xamarin_class_map [21].handle = objc_getClass ("UIStoryboardSegue");
+	__xamarin_class_map [22].handle = objc_getClass ("UIScrollView");
+	__xamarin_class_map [23].handle = objc_getClass ("UITableView");
+	__xamarin_class_map [24].handle = objc_getClass ("UITableViewCell");
+	__xamarin_class_map [25].handle = objc_getClass ("NSURL");
+	__xamarin_class_map [26].handle = objc_getClass ("UITextField");
+	__xamarin_class_map [27].handle = objc_getClass ("__MonoMac_NSActionDispatcher");
+	__xamarin_class_map [28].handle = objc_getClass ("__MonoMac_NSAsyncActionDispatcher");
+	__xamarin_class_map [29].handle = objc_getClass ("NSAutoreleasePool");
+	__xamarin_class_map [30].handle = objc_getClass ("NSError");
+	__xamarin_class_map [31].handle = objc_getClass ("CIContext");
+	__xamarin_class_map [32].handle = objc_getClass ("NSException");
+	__xamarin_class_map [33].handle = objc_getClass ("NSUserActivity");
+	__xamarin_class_map [34].handle = objc_getClass ("NSNull");
+	__xamarin_class_map [35].handle = objc_getClass ("UITextSelectionRect");
+	__xamarin_class_map [36].handle = objc_getClass ("UILocalNotification");
+	__xamarin_class_map [37].handle = objc_getClass ("UIApplicationShortcutItem");
+	__xamarin_class_map [38].handle = objc_getClass ("UIWindow");
+	__xamarin_class_map [39].handle = objc_getClass ("UITextPosition");
+	__xamarin_class_map [40].handle = objc_getClass ("UITextRange");
+	__xamarin_class_map [41].handle = objc_getClass ("UILabel");
+	__xamarin_class_map [42].handle = objc_getClass ("UIImageView");
+	__xamarin_class_map [43].handle = objc_getClass ("UITouch");
+	__xamarin_class_map [44].handle = objc_getClass ("UIUserNotificationSettings");
+	__xamarin_class_map [45].handle = objc_getClass ("UITableViewRowAction");
+	__xamarin_class_map [46].handle = objc_getClass ("UIFocusAnimationCoordinator");
+	__xamarin_class_map [47].handle = objc_getClass ("UIFocusUpdateContext");
+	__xamarin_class_map [48].handle = objc_getClass ("UIPress");
+	__xamarin_class_map [49].handle = objc_getClass ("UITableViewFocusUpdateContext");
+	__xamarin_class_map [50].handle = objc_getClass ("UITraitCollection");
+	__xamarin_class_map [51].handle = objc_getClass ("NSData");
+	__xamarin_class_map [52].handle = objc_getClass ("NSDictionary");
+	__xamarin_class_map [53].handle = objc_getClass ("UIAlertView");
+	__xamarin_class_map [54].handle = objc_getClass ("NSMutableDictionary");
+	__xamarin_class_map [55].handle = objc_getClass ("UIGestureRecognizer");
+	__xamarin_class_map [56].handle = [AppDelegate class];
+	__xamarin_class_map [57].handle = [test3_RootTableSource class];
+	__xamarin_class_map [58].handle = [DataViewController class];
+	__xamarin_class_map [59].handle = [FirstViewController class];
+	__xamarin_class_map [60].handle = [test3_Camera_CameraDelegate class];
+	__xamarin_class_map [61].handle = [SecondViewController class];
+	__xamarin_class_map [62].handle = objc_getClass ("UIKit_UIAlertView__UIAlertViewDelegate");
+	__xamarin_class_map [63].handle = objc_getClass ("__UIGestureRecognizerToken");
+	__xamarin_class_map [64].handle = objc_getClass ("__UIGestureRecognizerParameterlessToken");
+	__xamarin_class_map [65].handle = objc_getClass ("__UIGestureRecognizerParametrizedToken");
+	__xamarin_class_map [66].handle = objc_getClass ("__NSObject_Disposer");
+	__xamarin_class_map [67].handle = objc_getClass ("UIKit_UIScrollView__UIScrollViewDelegate");
 	xamarin_add_registration_map (&__xamarin_registration_map);
 }
 

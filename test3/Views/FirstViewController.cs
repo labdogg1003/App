@@ -82,7 +82,7 @@ namespace StoryboardTable
 			dataService.RefreshCache ();
 
 			//Reset Our Table View
-			TableView.Source = new RootTableSource(dataSet);
+			TableView.Source = new RootTableSource(dataSet, this);
 
 			//Add Our Data To The List
 			foreach (DataSet element in dataService.DataSets)
@@ -105,6 +105,20 @@ namespace StoryboardTable
 		}
 
 		#endregion
+
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier == "DataViewSegue") { // set in Storyboard
+				var navctlr = segue.DestinationViewController as DataViewController;
+				if (navctlr != null) {
+					var source = TableView.Source as RootTableSource;
+					var rowPath = TableView.IndexPathForSelectedRow;
+					var item = source.GetItem (rowPath.Row);
+
+
+				}
+			}
+		}
 	}
 }
 

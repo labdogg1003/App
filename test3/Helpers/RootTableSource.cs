@@ -10,12 +10,13 @@ namespace test3
 		// there is NO database or storage of Tasks in this example, just an in-memory List<>
 		List<DataSet> tableItems;
 		DataSetJsonService dataService = new DataSetJsonService (Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments));
-
+		private UITableViewController parentController;
 		string cellIdentifier = "taskcell"; // set in the Storyboard
 
-		public RootTableSource (List<DataSet> items)
+		public RootTableSource (List<DataSet> items, UITableViewController parent)
 		{
 			tableItems = items;
+			this.parentController = parent;
 		}
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
@@ -53,19 +54,6 @@ namespace test3
 				tableItems.RemoveAt (indexPath.Row);
 				// delete the row from the table
 				tableView.DeleteRows (new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-
-				Console.WriteLine("Data Service Sets :");
-				foreach (DataSet element in dataService.DataSets)
-				{
-					Console.WriteLine (element.dataSetName);
-				}
-
-				Console.WriteLine("Table Items :");
-				foreach (DataSet element in tableItems)
-				{
-					Console.WriteLine (element.dataSetName);
-				}
-
 				break;
 			case UITableViewCellEditingStyle.None:
 				Console.WriteLine ("CommitEditingStyle:None called");
@@ -85,6 +73,13 @@ namespace test3
 		{
 			string jpgFilename = System.IO.Path.Combine (dataService._storagePath, filename + ".jpg");
 			System.IO.File.Delete (jpgFilename);
+		}
+
+		public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+		{
+			this.parentController.PerformSegue("DataViewSegue", indexPath);
+			Console.WriteLine (((DataSet)tableItems [indexPath.Row]).dataSetName + " selected!");
+			tableView.DeselectRow (indexPath, true);
 		}
 	}
 }

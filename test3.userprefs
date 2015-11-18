@@ -1,9 +1,11 @@
 ﻿<Properties StartupItem="test3/test3.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/SecondViewController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Helpers/ImageProcessing.cs">
     <Files>
-      <File FileName="test3/Helpers/ImageProcessing.cs" Line="147" Column="7" />
-      <File FileName="test3/Views/SecondViewController.cs" Line="26" Column="3" />
+      <File FileName="test3/Helpers/ImageProcessing.cs" Line="116" Column="4" />
+      <File FileName="test3/Views/SecondViewController.cs" Line="1" Column="1" />
+      <File FileName="test3/Views/FirstViewController.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/RootTableSource.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

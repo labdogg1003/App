@@ -16,8 +16,8 @@ namespace test3
 	partial class DataViewController : UIViewController
 	{
 		//These are the two images we write to in this view for buttons.
-		UIImage dataImage;
-		UIImage P0Image;
+		UIImage _dataImage;
+		UIImage _P0Image;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		//UIImage photo;
@@ -28,10 +28,19 @@ namespace test3
 
 		}
 
+		public DataViewController(UIImage dataImage, UIImage P0Image, string name)
+		{
+			_dataImage = dataImage;
+			_P0Image = P0Image;
+		}
+
 		public override void ViewDidLoad ()
 		{
 			//Load the base Method.
 			base.ViewDidLoad ();
+
+			imgData.Image = _dataImage;
+			imgP0.Image = _P0Image;
 
 			//TODO : Show the data From the dataSet that is passed In.
 
