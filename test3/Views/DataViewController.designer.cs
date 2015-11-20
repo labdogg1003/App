@@ -16,6 +16,10 @@ namespace test3
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnBack { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIImageView imgData { get; set; }
 
 		[Outlet]
@@ -24,10 +28,22 @@ namespace test3
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel lblStatus { get; set; }
+		UILabel lblData { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblDataPower { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel lblP0 { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (btnBack != null) {
+				btnBack.Dispose ();
+				btnBack = null;
+			}
 			if (imgData != null) {
 				imgData.Dispose ();
 				imgData = null;
@@ -36,9 +52,17 @@ namespace test3
 				imgP0.Dispose ();
 				imgP0 = null;
 			}
-			if (lblStatus != null) {
-				lblStatus.Dispose ();
-				lblStatus = null;
+			if (lblData != null) {
+				lblData.Dispose ();
+				lblData = null;
+			}
+			if (lblDataPower != null) {
+				lblDataPower.Dispose ();
+				lblDataPower = null;
+			}
+			if (lblP0 != null) {
+				lblP0.Dispose ();
+				lblP0 = null;
 			}
 		}
 	}

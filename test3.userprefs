@@ -1,11 +1,17 @@
 ﻿<Properties StartupItem="test3/test3.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Helpers/ImageProcessing.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone5s.9.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Info.plist">
     <Files>
-      <File FileName="test3/Helpers/ImageProcessing.cs" Line="116" Column="4" />
+      <File FileName="test3/Helpers/ImageProcessing.cs" Line="1" Column="1" />
       <File FileName="test3/Views/SecondViewController.cs" Line="1" Column="1" />
       <File FileName="test3/Views/FirstViewController.cs" Line="1" Column="1" />
+      <File FileName="test3/Views/DataViewController.cs" Line="1" Column="1" />
       <File FileName="test3/Helpers/RootTableSource.cs" Line="1" Column="1" />
+      <File FileName="test3/CustomDataCell.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/Camera.cs" Line="1" Column="1" />
+      <File FileName="test3/Main.cs" Line="1" Column="1" />
+      <File FileName="test3/Info.plist" />
+      <File FileName="test3/Entitlements.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

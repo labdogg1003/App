@@ -114,10 +114,17 @@ namespace StoryboardTable
 					var source = TableView.Source as RootTableSource;
 					var rowPath = TableView.IndexPathForSelectedRow;
 					var item = source.GetItem (rowPath.Row);
-
-
+					navctlr._dataImage = getImageFromFile (item, "Data");
+					navctlr._P0Image = getImageFromFile (item, "P0");
 				}
 			}
+		}
+
+		public UIImage getImageFromFile(DataSet set, string type) // Type is either P0 or Data
+		{
+			string filename = set.dataSetName + type + set.Id;
+			string jpgFilename = System.IO.Path.Combine (dataService._storagePath, filename + ".jpg");
+			return UIImage.FromFile (jpgFilename);
 		}
 	}
 }

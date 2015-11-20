@@ -11,13 +11,18 @@ using System.Threading.Tasks;
 //Two buttons are images that can be clicked to change the underlying image.
 //it also contains two UIImage that are set independently of the buttons.
 //The last button saves the two images to an object and adds them the history list.
+using System.Drawing;
+using CoreGraphics;
+using StoryboardTable;
+
+
 namespace test3
 {
 	partial class DataViewController : UIViewController
 	{
 		//These are the two images we write to in this view for buttons.
-		UIImage _dataImage;
-		UIImage _P0Image;
+		public UIImage _dataImage;
+		public UIImage _P0Image;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		//UIImage photo;
@@ -28,10 +33,11 @@ namespace test3
 
 		}
 
-		public DataViewController(UIImage dataImage, UIImage P0Image, string name)
+		public DataViewController(UIImage dataImage, UIImage P0Image)
 		{
 			_dataImage = dataImage;
 			_P0Image = P0Image;
+
 		}
 
 		public override void ViewDidLoad ()
@@ -39,11 +45,29 @@ namespace test3
 			//Load the base Method.
 			base.ViewDidLoad ();
 
-			imgData.Image = _dataImage;
-			imgP0.Image = _P0Image;
+			imgData.Image = _dataImage.Scale(new CGSize(100,100));
+			imgP0.Image = _P0Image.Scale(new CGSize(100,100));
+			lblData.Text = ImageProcessing.CalculatePValue ( _dataImage);  
+			lblP0.Text = ImageProcessing.CalculatePValue ( _dataImage); 
 
 			//TODO : Show the data From the dataSet that is passed In.
+			btnBack.TouchUpInside += (o, e) => {
+				this.PerformSegue("FirstViewSegue", this );
+			};
+		}
 
+		public void closeLookup()
+		{
+			this.Dispose();
+		}
+
+		public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
+		{
+			if (segue.Identifier == "FirstViewSegue") { // set in Storyboard
+				var navctlr = segue.DestinationViewController as FirstViewController;
+				if (navctlr != null) {
+				}
+			}
 		}
 	}
 }

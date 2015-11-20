@@ -96,6 +96,10 @@
     <ImageAsset Include="Resources\Images.xcassets\First.imageset\First.pdf" />
     <ImageAsset Include="Resources\Images.xcassets\Second.imageset\Contents.json" />
     <ImageAsset Include="Resources\Images.xcassets\Second.imageset\Second.pdf" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
@@ -133,6 +137,14 @@
       <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSetJsonService.cs" />
+    <Compile Include="NewViewController.cs" />
+    <Compile Include="NewViewController.designer.cs">
+      <DependentUpon>NewViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomDataCell.cs" />
+    <Compile Include="CustomDataCell.designer.cs">
+      <DependentUpon>CustomDataCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.1.5.0.6446\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.5.0.6446\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
@@ -147,7 +159,6 @@
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\blurred-background-1.jpg" />
     <BundleResource Include="Resources\Pics\monkey.jpeg" />
     <BundleResource Include="Resources\Pics\DefaultPicture.png" />

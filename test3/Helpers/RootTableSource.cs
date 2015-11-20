@@ -25,14 +25,14 @@ namespace test3
 		public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 		{
 			// in a Storyboard, Dequeue will ALWAYS return a cell,
-			UITableViewCell cell = tableView.DequeueReusableCell (cellIdentifier);
-
-			//Converts our table item to a DataSet
+			CustomDataCell cell = tableView.DequeueReusableCell (cellIdentifier) as CustomDataCell;
 			DataSet dataSet = ((DataSet)tableItems [indexPath.Row]);
+			cell.UpdateCell (tableItems[indexPath.Row].dataSetName,UIImage.FromFile (System.IO.Path.Combine (dataService._storagePath, dataSet.dataSetName + "Data" + dataSet.Id + ".jpg")) );
+			//Converts our table item to a DataSet
 			// now set the properties as normal
-			cell.TextLabel.Text = tableItems[indexPath.Row].dataSetName;
-			cell.ImageView.Image = UIImage.FromFile (System.IO.Path.Combine (dataService._storagePath, dataSet.dataSetName + "Data" + dataSet.Id + ".jpg"));
-
+			//cell.TextLabel.Text = tableItems[indexPath.Row].dataSetName;
+			//cell.ImageView.Image = UIImage.FromFile (System.IO.Path.Combine (dataService._storagePath, dataSet.dataSetName + "Data" + dataSet.Id + ".jpg"));
+			tableView.RowHeight = 60;
 			return cell;
 		}
 		public DataSet GetItem(int id)
