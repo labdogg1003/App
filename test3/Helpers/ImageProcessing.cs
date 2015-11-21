@@ -21,8 +21,11 @@ namespace test3
 		public ImageProcessing ()
 		{
 		}
-
-		public static String CalculatePValue(string pic)
+		public static nfloat ComputerA(nfloat P, nfloat P0)
+		{
+			return (nfloat)(-Math.Log (P / P0));
+		}
+		public static String CalculatePValue(string pic, ref nfloat totP, ref nfloat avgP)
 		{
 			UIImage uiImagePic = new UIImage(pic);
 
@@ -81,13 +84,15 @@ namespace test3
 
 				//Console.Write("\n");
 			}
+			totP = powerValueTot;
+			avgP = powerValueAvg;
 			string outputToName;
-			outputToName = "Avg Power=" + powerValueAvg.ToString ("0.0000") + " Tot Power=" + powerValueTot.ToString ("0.0000");
+			outputToName = "Avg Power=" + powerValueAvg.ToString ("0.0000") + " \n Tot Power=" + powerValueTot.ToString ("0.0000");
 			return outputToName;
 
 		}
 
-		public static String CalculatePValue(UIImage image)
+		public static String[] CalculatePValue(UIImage image, ref nfloat totP, ref nfloat avgP)
 		{
 			UIImage uiImagePic = image;
 
@@ -146,10 +151,15 @@ namespace test3
 
 				//Console.Write("\n");
 			}
+			totP = powerValueTot;
+			avgP = powerValueAvg;
 			string outputToName;
-			outputToName = "Avg Power=" + powerValueAvg.ToString ("0.0000") + " Tot Power=" + powerValueTot.ToString ("0.0000");
-			return outputToName;
-
+			outputToName =  powerValueAvg.ToString ("0.0000");
+			string outputToName2 = powerValueTot.ToString ("0.0000");
+			string[] strToRet = new string[2];
+			strToRet [0] = outputToName;
+			strToRet [1] = outputToName2;
+			return strToRet;
 		}
 
 		//Scale Image

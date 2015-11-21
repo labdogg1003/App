@@ -19,6 +19,8 @@ namespace test3
 		UIImage P0Image = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		UIImage dataImage = UIImage.FromBundle("Pics/TapToAddPicture.png");
 		NSString nString = new NSString ("UIImagePickerControllerOriginalImage");
+		bool P0Taken = false;
+		bool DataTaken = false;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
@@ -47,12 +49,14 @@ namespace test3
 					photo = obj.ValueForKey (nString) as UIImage;
 	
 					dataImage = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
-					
+					DataTaken = true;
+
 					UpdateValues (txtDataValue, dataImage);
 				});
 				
 				//Set The Image As The Button Image
 				btnDataPhoto.SetImage (dataImage, UIControlState.Normal);
+
 
 			};
 
@@ -64,6 +68,7 @@ namespace test3
 					photo = obj.ValueForKey (nString) as UIImage;
 					
 					P0Image = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
+					P0Taken = true;
 					
 					UpdateValues (txtP0Value, P0Image);
 				});
@@ -175,7 +180,22 @@ namespace test3
 		//Using to test labels right now.
 		public void UpdateValues (UILabel label ,UIImage image)
 		{
-			label.Text = ImageProcessing.CalculatePValue (image);  
+			nfloat totP = 0.0f;
+			nfloat avgP = 0.0f;
+			string[] fromCalc = new string[2];
+			fromCalc= ImageProcessing.CalculatePValue (image, ref totP, ref avgP);
+			label.Text = fromCalc [0];
+			if(DataTaken && P0Taken)
+			{
+				string[] valuesFromCalc = new string[2];
+				valuesFromCalc = ImageProcessing.CalculatePValue ( dataImage, ref totP, ref avgP); 
+				nfloat avgPData = avgP;
+				string[] valuesFromCalcP0 = new string[2];
+				valuesFromCalcP0 = ImageProcessing.CalculatePValue ( P0Image, ref totP, ref avgP);  
+				nfloat avgP0 = avgP;
+				nfloat A = ImageProcessing.ComputerA (avgPData, avgP0);
+				txtAveValue.Text = A.ToString ();
+			}
 		}
 
 	}

@@ -18,7 +18,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 4,1
-	.asciz "Mono AOT Compiler 4.0.4 (xcode7-c5/751e0fa Wed Oct 21 22:49:31 EDT 2015)"
+	.asciz "Mono AOT Compiler 4.0.4 (mono-4.0.0-branch-c5sr4/5ab4c0d Mon Aug 24 14:58:42 EDT 2015)"
 	.asciz "System.Runtime.Serialization.dll"
 	.asciz ""
 
@@ -120,7 +120,7 @@ jit_code_start:
 	.no_dead_strip System_Runtime_Serialization_DataContractAttribute_get_IsReference
 System_Runtime_Serialization_DataContractAttribute_get_IsReference:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,8,0,208,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,8,0,208,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_0:
@@ -129,7 +129,7 @@ Lme_0:
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute_get_EmitDefaultValue
 System_Runtime_Serialization_DataMemberAttribute_get_EmitDefaultValue:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,13,0,208,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,13,0,208,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_1:
@@ -138,7 +138,7 @@ Lme_1:
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute_get_IsRequired
 System_Runtime_Serialization_DataMemberAttribute_get_IsRequired:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,12,0,208,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,12,0,208,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_2:
@@ -147,7 +147,7 @@ Lme_2:
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute_get_Name
 System_Runtime_Serialization_DataMemberAttribute_get_Name:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,8,0,144,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,8,0,144,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_3:
@@ -156,7 +156,7 @@ Lme_3:
 	.no_dead_strip System_Runtime_Serialization_DataMemberAttribute_get_Order
 System_Runtime_Serialization_DataMemberAttribute_get_Order:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,16,0,144,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,16,0,144,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_4:
@@ -165,7 +165,7 @@ Lme_4:
 	.no_dead_strip System_Runtime_Serialization_EnumMemberAttribute_get_Value
 System_Runtime_Serialization_EnumMemberAttribute_get_Value:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,3,223,77,226,0,0,141,229,0,0,157,229,8,0,144,229,3,223,141,226
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,0,0,157,229,8,0,144,229,12,208,141,226
 	.byte 0,1,189,232,128,128,189,232
 
 Lme_5:
@@ -272,7 +272,7 @@ image_table:
 
 	.long 1,2,0,5,0
 	.asciz "mscorlib"
-	.asciz "4D8ADC30-0E43-4191-BC92-7BE34DCB9230"
+	.asciz "C8CB9590-CFD6-4191-A87F-45439AF03A21"
 	.asciz ""
 	.asciz "7cec85d7bea7798e"
 	.align 3
@@ -384,9 +384,9 @@ blob:
 	.byte 24,6,4,2,0,14,28,24,40,208,0,0,13,0,0,2,1,24,6,4,2,0,14,28,24,40,208,0,0,13,0,0
 	.byte 2,1,24,6,4,2,0,14,28,24,40,208,0,0,13,0,0,2,1,24,6,4,2,0,14,28,24,40,208,0,0,13
 	.byte 0,0,2,1,24,6,4,2,0,14,28,24,40,208,0,0,13,0,0,2,1,24,6,4,0,128,144,8,0,0,1,4
-	.byte 128,128,9,0,0,1,193,0,19,176,193,0,17,159,193,0,19,172,193,0,17,164,4,128,160,20,0,0,4,193,0,19
-	.byte 176,193,0,17,159,193,0,19,172,193,0,17,164,4,128,160,12,0,0,4,193,0,19,176,193,0,17,159,193,0,19,172
-	.byte 193,0,17,164,4,128,144,8,0,0,1,193,0,19,176,193,0,17,159,193,0,19,172,193,0,17,164,115,103,101,110,0
+	.byte 128,128,9,0,0,1,193,0,19,170,193,0,17,153,193,0,19,166,193,0,17,158,4,128,160,20,0,0,4,193,0,19
+	.byte 170,193,0,17,153,193,0,19,166,193,0,17,158,4,128,160,12,0,0,4,193,0,19,170,193,0,17,153,193,0,19,166
+	.byte 193,0,17,158,4,128,144,8,0,0,1,193,0,19,170,193,0,17,153,193,0,19,166,193,0,17,158,115,103,101,110,0
 .section __TEXT, __const
 	.align 3
 Lglobals_hash:
@@ -830,8 +830,8 @@ Ldebug_line_start:
 	.long Ldebug_line_header_end - . -4
 	.byte 1,1,251,14,13,0,1,1,1,1,0,0,0,1,0,0,1
 .section __DWARF, __debug_line,regular,debug
-	.asciz "/Users/builder/data/lanes/2320/7426bd76/source/maccore/_build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/external/referencesource/System.Runtime.Serialization/System/Runtime/Serialization"
-	.asciz "/Users/builder/data/lanes/2320/7426bd76/source/maccore/_build/Library/Frameworks/Xamarin.iOS.framework/Versions/git/src/mono/mcs/class/System.Runtime.Serialization/System.Runtime.Serialization"
+	.asciz "//Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.5.26/src/mono/external/referencesource/System.Runtime.Serialization/System/Runtime/Serialization"
+	.asciz "//Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.5.26/src/mono/mcs/class/System.Runtime.Serialization/System.Runtime.Serialization"
 
 	.byte 0
 	.asciz "DataContractAttribute.cs"

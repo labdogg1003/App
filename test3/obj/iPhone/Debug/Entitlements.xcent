@@ -5,7 +5,7 @@
 	<key>get-task-allow</key>
 	<true/>
 	<key>application-identifier</key>
-	<string>88TJ27WWUY.com.companyname.test3</string>
+	<string>88TJ27WWUY.com.companyname.ChemApp</string>
 	<key>com.apple.developer.team-identifier</key>
 	<string>88TJ27WWUY</string>
 </dict>

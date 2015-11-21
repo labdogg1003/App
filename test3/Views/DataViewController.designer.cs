@@ -16,7 +16,19 @@ namespace test3
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel ALabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel AValue { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btnBack { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel DataAvgValue { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -25,6 +37,10 @@ namespace test3
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIImageView imgP0 { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel LabelDataAvg { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -38,11 +54,27 @@ namespace test3
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel lblP0 { get; set; }
 
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel PAvgValue { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (ALabel != null) {
+				ALabel.Dispose ();
+				ALabel = null;
+			}
+			if (AValue != null) {
+				AValue.Dispose ();
+				AValue = null;
+			}
 			if (btnBack != null) {
 				btnBack.Dispose ();
 				btnBack = null;
+			}
+			if (DataAvgValue != null) {
+				DataAvgValue.Dispose ();
+				DataAvgValue = null;
 			}
 			if (imgData != null) {
 				imgData.Dispose ();
@@ -51,6 +83,10 @@ namespace test3
 			if (imgP0 != null) {
 				imgP0.Dispose ();
 				imgP0 = null;
+			}
+			if (LabelDataAvg != null) {
+				LabelDataAvg.Dispose ();
+				LabelDataAvg = null;
 			}
 			if (lblData != null) {
 				lblData.Dispose ();
@@ -63,6 +99,10 @@ namespace test3
 			if (lblP0 != null) {
 				lblP0.Dispose ();
 				lblP0 = null;
+			}
+			if (PAvgValue != null) {
+				PAvgValue.Dispose ();
+				PAvgValue = null;
 			}
 		}
 	}

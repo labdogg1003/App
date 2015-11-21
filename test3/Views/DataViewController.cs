@@ -44,12 +44,22 @@ namespace test3
 		{
 			//Load the base Method.
 			base.ViewDidLoad ();
-
+			nfloat totP = 0.0f;
+			nfloat avgP = 0.0f;
 			imgData.Image = _dataImage.Scale(new CGSize(100,100));
 			imgP0.Image = _P0Image.Scale(new CGSize(100,100));
-			lblData.Text = ImageProcessing.CalculatePValue ( _dataImage);  
-			lblP0.Text = ImageProcessing.CalculatePValue ( _dataImage); 
-
+			string[] valuesFromCalc = new string[2];
+			valuesFromCalc = ImageProcessing.CalculatePValue ( _dataImage, ref totP, ref avgP); 
+			nfloat avgPData = avgP;
+			string[] valuesFromCalcP0 = new string[2];
+			valuesFromCalcP0 = ImageProcessing.CalculatePValue ( _P0Image, ref totP, ref avgP);  
+			nfloat avgP0 = avgP;
+			nfloat A = ImageProcessing.ComputerA (avgPData, avgP0);
+			AValue.Text = A.ToString ();
+			lblData.Text = valuesFromCalc [1];
+			lblP0.Text = valuesFromCalcP0[1]; 
+			DataAvgValue.Text = valuesFromCalc [0];
+			PAvgValue.Text = valuesFromCalcP0 [0];
 			//TODO : Show the data From the dataSet that is passed In.
 			btnBack.TouchUpInside += (o, e) => {
 				this.PerformSegue("FirstViewSegue", this );
