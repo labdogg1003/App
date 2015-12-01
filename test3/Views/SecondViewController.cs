@@ -48,7 +48,7 @@ namespace test3
 				{
 					photo = obj.ValueForKey (nString) as UIImage;
 	
-					dataImage = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
+					dataImage = photo;//ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
 					DataTaken = true;
 
 					UpdateValues (txtDataValue, dataImage);
@@ -67,7 +67,7 @@ namespace test3
 				{
 					photo = obj.ValueForKey (nString) as UIImage;
 					
-					P0Image = ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
+					P0Image = photo;//ImageProcessing.MaxResizeImage(photo, .5f); // 50% of original size
 					P0Taken = true;
 					
 					UpdateValues (txtP0Value, P0Image);
