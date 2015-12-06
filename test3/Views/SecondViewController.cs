@@ -21,6 +21,11 @@ namespace test3
 		NSString nString = new NSString ("UIImagePickerControllerOriginalImage");
 		bool P0Taken = false;
 		bool DataTaken = false;
+		nfloat lastTotalP0;
+		nfloat lastAvgP0;
+		nfloat lastTotalData;
+		nfloat lastAvgData;
+		nfloat lastA;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		UIImage photo;
@@ -128,7 +133,13 @@ namespace test3
 			{
 				DataSet dataSet = new DataSet()
 				{
-					dataSetName = text	
+					dataSetName = text,
+					dataSetAvgP0 = lastAvgP0.ToString("0.0000"),
+					dataSetTotP0 = lastTotalP0.ToString("0.0000"),
+					dataSetAvgData = lastAvgData.ToString("0.0000"),
+					dataSetTotData = lastTotalData.ToString("0.0000"),
+					dataSetA = lastA.ToString("0.0000000")
+
 				};
 						
 				try //This Has A Possibility To Crash The Program
@@ -187,13 +198,19 @@ namespace test3
 			label.Text = fromCalc [0];
 			if(DataTaken && P0Taken)
 			{
+				
 				string[] valuesFromCalc = new string[2];
 				valuesFromCalc = ImageProcessing.CalculatePValue ( dataImage, ref totP, ref avgP); 
 				nfloat avgPData = avgP;
+				lastAvgData = avgP;
+				lastTotalData = totP;
 				string[] valuesFromCalcP0 = new string[2];
 				valuesFromCalcP0 = ImageProcessing.CalculatePValue ( P0Image, ref totP, ref avgP);  
 				nfloat avgP0 = avgP;
 				nfloat A = ImageProcessing.ComputerA (avgPData, avgP0);
+				lastAvgP0 = avgP0;
+				lastTotalP0 = totP;
+				lastA = A;
 				txtAveValue.Text = A.ToString ();
 			}
 		}

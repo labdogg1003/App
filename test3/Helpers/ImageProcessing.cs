@@ -23,7 +23,7 @@ namespace test3
 		}
 		public static nfloat ComputerA(nfloat P, nfloat P0)
 		{
-			return (nfloat)(-Math.Log (P / P0));
+			return (nfloat)(-Math.Log10 (P / P0));
 		}
 		public static String CalculatePValue(string pic, ref nfloat totP, ref nfloat avgP)
 		{

@@ -116,6 +116,11 @@ namespace StoryboardTable
 					var item = source.GetItem (rowPath.Row);
 					navctlr._dataImage = getImageFromFile (item, "Data");
 					navctlr._P0Image = getImageFromFile (item, "P0");
+					navctlr.A = item.dataSetA;
+					navctlr.avgP0 = item.dataSetAvgP0;
+					navctlr.totP0 = item.dataSetTotP0;
+					navctlr.avgData = item.dataSetAvgData;
+					navctlr.totData = item.dataSetTotData;
 				}
 			}
 		}

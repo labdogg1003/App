@@ -1,27 +1,30 @@
 ﻿<Properties StartupItem="test3/test3.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.iPod touch" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.Benji's Realm" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="test3/Views/SecondViewController.cs">
     <Files>
       <File FileName="test3/TableSource.cs" Line="1" Column="1" />
-      <File FileName="test3/Main.cs" Line="1" Column="1" />
+      <File FileName="test3/Main.cs" Line="12" Column="1" />
       <File FileName="test3/TableData.cs" Line="1" Column="1" />
       <File FileName="test3/OutputRecorder.cs" Line="1" Column="1" />
-      <File FileName="test3/DataSet.cs" Line="38" Column="1" />
+      <File FileName="test3/DataSet.cs" Line="36" Column="4" />
       <File FileName="test3/packages.config" Line="1" Column="1" />
-      <File FileName="test3/Views/DataViewController.cs" Line="49" Column="44" />
-      <File FileName="test3/Views/FirstViewController.cs" Line="27" Column="10" />
-      <File FileName="test3/Views/SecondViewController.cs" Line="104" Column="4" />
-      <File FileName="test3/AppDelegate.cs" Line="1" Column="10" />
-      <File FileName="test3/Helpers/ImageProcessing.cs" Line="63" Column="22" />
+      <File FileName="test3/Views/DataViewController.cs" Line="55" Column="54" />
+      <File FileName="test3/Views/FirstViewController.cs" Line="76" Column="1" />
+      <File FileName="test3/Views/SecondViewController.cs" Line="141" Column="42" />
+      <File FileName="test3/AppDelegate.cs" Line="1" Column="1" />
+      <File FileName="test3/Helpers/ImageProcessing.cs" Line="26" Column="31" />
       <File FileName="test3/Info.plist" />
       <File FileName="test3/Entitlements.plist" />
+      <File FileName="test3/Views/FirstViewController.designer.cs" Line="1" Column="1" />
+      <File FileName="test3/DataSetJsonService.cs" Line="56" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/bobwise/Documents/App/test3/DataSet.cs" line="17" column="1" />
-      <Breakpoint file="/Users/bobwise/Documents/App/test3/Helpers/ImageProcessing.cs" line="59" column="1" />
-      <Breakpoint file="/Users/bobwise/Documents/App/test3/Helpers/ImageProcessing.cs" line="61" column="1" />
+      <Breakpoint file="/Users/bobwise/Documents/App/test3/Helpers/ImageProcessing.cs" line="62" column="1" />
+      <Breakpoint file="/Users/bobwise/Documents/App/test3/Helpers/ImageProcessing.cs" line="64" column="1" />
+      <Breakpoint file="/Users/bobwise/Documents/App/test3/Views/SecondViewController.cs" line="138" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

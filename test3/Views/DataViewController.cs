@@ -23,6 +23,11 @@ namespace test3
 		//These are the two images we write to in this view for buttons.
 		public UIImage _dataImage;
 		public UIImage _P0Image;
+		public string avgP0;
+		public string totP0;
+		public string avgData;
+		public string totData;
+		public string A;
 
 		//photo is a temp. holder of our images as they are passed from the camera : TODO test no temp image holder.
 		//UIImage photo;
@@ -48,19 +53,11 @@ namespace test3
 			nfloat avgP = 0.0f;
 			imgData.Image = _dataImage.Scale(new CGSize(100,100));
 			imgP0.Image = _P0Image.Scale(new CGSize(100,100));
-			string[] valuesFromCalc = new string[2];
-			valuesFromCalc = ImageProcessing.CalculatePValue ( _dataImage, ref totP, ref avgP); 
-			nfloat avgPData = avgP;
-			string[] valuesFromCalcP0 = new string[2];
-			valuesFromCalcP0 = ImageProcessing.CalculatePValue ( _P0Image, ref totP, ref avgP);  
-			nfloat avgP0 = avgP;
-			nfloat A = ImageProcessing.ComputerA (avgPData, avgP0);
-			AValue.Text = A.ToString ();
-			lblData.Text = valuesFromCalc [1];
-			lblP0.Text = valuesFromCalcP0[1]; 
-			DataAvgValue.Text = valuesFromCalc [0];
-			PAvgValue.Text = valuesFromCalcP0 [0];
-			//TODO : Show the data From the dataSet that is passed In.
+			AValue.Text = this.A;
+			lblData.Text = this.totData;
+			lblP0.Text = this.totP0;
+			DataAvgValue.Text = this.avgData;
+			PAvgValue.Text = this.avgP0;
 			btnBack.TouchUpInside += (o, e) => {
 				this.PerformSegue("FirstViewSegue", this );
 			};

@@ -15,7 +15,7 @@
 	--sdk \
 	8.4 \
 	--targetver \
-	8.2 \
+	8.1 \
 	--new-refcount \
 	--abi=armv7,arm64 \
 	--symbollist \
