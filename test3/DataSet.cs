@@ -18,6 +18,7 @@ namespace test3
 	//Images Are Derived from the datasetname and the Id which gives it a unique identifier;
 	public class DataSet
 	{
+		public string foo { get; set; }
 		public string dataSetAvgP0 { get; set;}
 		public string dataSetTotP0 { get; set;}
 		public string dataSetAvgData { get; set;}
